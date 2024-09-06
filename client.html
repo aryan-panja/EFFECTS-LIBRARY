@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Gallery with Smooth Infinite Scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            transition: background-color 0.5s; /* Smooth transition for background color */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            right: 50%;
+        }
+
+        .item {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .item p, .names{
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery"></div>
+        <div class="names"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        const names = [
+            { "id": 1, "name": "Olivia", "color": "#FF6347" }, { "id": 2, "name": "Wendy", "color": "#4682B4" }, 
+            { "id": 3, "name": "Quinn", "color": "#32CD32" }, { "id": 4, "name": "Alice", "color": "#FFD700" }, 
+            { "id": 5, "name": "Steve", "color": "#DA70D6" }, { "id": 6, "name": "Frank", "color": "#FF4500" }, 
+            { "id": 7, "name": "Liam", "color": "#00CED1" }, { "id": 8, "name": "Zane", "color": "#FF1493" }, 
+            { "id": 9, "name": "Opal", "color": "#8A2BE2" }, { "id": 10, "name": "Rose", "color": "#B0C4DE" }, 
+            { "id": 11, "name": "Xander", "color": "#7FFF00" }, { "id": 12, "name": "Hannah", "color": "#FF69B4" }, 
+            { "id": 13, "name": "Brian", "color": "#8B4513" }, { "id": 14, "name": "Zane", "color": "#20B2AA" }, 
+            { "id": 15, "name": "Rachel", "color": "#FF8C00" }, { "id": 16, "name": "John", "color": "#ADFF2F" }, 
+            { "id": 17, "name": "Hannah", "color": "#E6E6FA" }, { "id": 18, "name": "Jane", "color": "#A52A2A" }, 
+            { "id": 19, "name": "Xander", "color": "#FFB6C1" }, { "id": 20, "name": "Alice", "color": "#B0E57C" }
+        ];
+
+        const gallery = document.querySelector(".gallery");
+        const numberOfItems = names.length;
+        let radius = Math.min(window.innerWidth, window.innerHeight) * 0.5;
+        let centerX = window.innerWidth / 2;
+        let centerY = window.innerHeight / 2;
+        const angleIncrement = (Math.PI * 2) / numberOfItems;
+
+        let rotationAngle = 0;
+        let scrollVelocity = 0;
+        const rotationSpeed = 0.005; // Adjust this value for overall scroll speed
+
+        document.addEventListener("DOMContentLoaded", function () {
+            for (let i = 0; i < numberOfItems; i++) {
+                const item = document.createElement("div");
+                item.className = "item";
+                const p = document.createElement("p");
+                p.textContent = names[i].name;
+                item.appendChild(p);
+                gallery.appendChild(item);
+            }
+
+            // Set initial positions without animation
+            updatePosition();
+        });
+
+        function updatePosition() {
+            let centerItemIndex = null;
+            let minDistance = Infinity;
+
+            document.querySelectorAll(".item").forEach(function (item, index) {
+                const angle = index * angleIncrement + rotationAngle;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                const rotation = (angle * 180) / Math.PI;
+
+                // Update position without animation
+                item.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+
+                // Calculate the distance from the center of the viewport to the item
+                const itemRect = item.getBoundingClientRect();
+                const itemCenterX = (itemRect.left + itemRect.right) / 2;
+                const itemCenterY = (itemRect.top + itemRect.bottom) / 2;
+                const distance = Math.sqrt(
+                    Math.pow(itemCenterX - window.innerWidth / 2, 2) +
+                    Math.pow(itemCenterY - window.innerHeight / 2, 2)
+                );
+
+                // Find the item closest to the center
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    centerItemIndex = index;
+                }
+            });
+
+            // Update the background color based on the most centered item
+            if (centerItemIndex !== null) {
+                document.body.style.backgroundColor = names[centerItemIndex].color;
+
+                // Display the name of the most centered item
+                document.querySelector(".names").textContent = names[centerItemIndex].name;
+            }
+        }
+
+        // Function to animate the scroll smoothly
+        function smoothScroll() {
+            rotationAngle += scrollVelocity * rotationSpeed;
+            updatePosition();
+            scrollVelocity *= 0.95; // Gradually reduce the velocity for inertia effect
+            requestAnimationFrame(smoothScroll);
+        }
+
+        // Start the smooth scroll animation
+        smoothScroll();
+
+        // Listen to scroll wheel events and adjust velocity
+        window.addEventListener("wheel", function (event) {
+            scrollVelocity += event.deltaY * 0.01; // Adjust scroll sensitivity
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+            radius = Math.min(window.innerWidth, window.innerHeight) * 0.4;
+            centerX = window.innerWidth / 2;
+            centerY = window.innerHeight / 2;
+            updatePosition();
+        });
+    </script>
+</body>
+
+</html>
