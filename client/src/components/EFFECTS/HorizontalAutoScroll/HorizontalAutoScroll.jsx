@@ -15,6 +15,34 @@ export function HorizontalAutoScroll() {
 
     const images = [test1, test2, test3, test4, test5, test6, test7, test8, test9, test10];
 
+    const data = [
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+            card3: 'Card Three'
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+        {
+            card1: 'Card One',
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+            card3: 'Card Three'
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+    ];
+
     return (
         <div className='flex'>
             <div className="flex flex-col gap-y-10 w-4/6">
@@ -30,18 +58,12 @@ export function HorizontalAutoScroll() {
                     ))}
                 </InfiniteSlider>
 
-                <InfiniteSlider gap={24} durationOnHover={30000}>
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
-                    <StackedCards />
+                <InfiniteSlider gap={24}>
+                    {
+                        data.map((stack, index) => (
+                            <StackedCards key={index} stack={stack} verticalGap={56} order={"start"}/>
+                        ))
+                    }
                 </InfiniteSlider>
             </div>
 

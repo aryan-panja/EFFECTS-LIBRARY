@@ -10,7 +10,7 @@ function App() {
       {/* <CircularGalleryEffect />  */}
       {/* <OnHoverBigRectangles /> */}
       <HorizontalAutoScroll />
-      <StackedCards />
+      {/* <StackedCards /> */}
     </div>
   )
 }
