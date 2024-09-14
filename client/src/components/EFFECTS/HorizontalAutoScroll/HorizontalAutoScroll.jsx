@@ -9,6 +9,7 @@ import test7 from "@/assets/brand logo/7.webp";
 import test8 from "@/assets/brand logo/8.webp";
 import test9 from "@/assets/brand logo/9.webp";
 import test10 from "@/assets/brand logo/10.webp";
+import { StackedCards } from '../StackedCards/StackedCards';
 
 export function HorizontalAutoScroll() {
 
@@ -27,6 +28,20 @@ export function HorizontalAutoScroll() {
                     {images.map((image, index) => (
                         <img key={index} src={image} alt="test" className="w-40 h-40" />
                     ))}
+                </InfiniteSlider>
+
+                <InfiniteSlider gap={24} durationOnHover={30000}>
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
+                    <StackedCards />
                 </InfiniteSlider>
             </div>
 
