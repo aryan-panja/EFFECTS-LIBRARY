@@ -1,17 +1,20 @@
-import CircularGalleryEffect from "./components/EFFECTS/CircularGalleryEffect/CircularGalleryEffect"
-import { HorizontalAutoScroll } from "./components/EFFECTS/HorizontalAutoScroll/HorizontalAutoScroll"
-import { OnHoverBigRectangles } from "./components/EFFECTS/OnHoverBigRectangles/OnHoverBigRectangles"
-import { StackedCards } from "./components/EFFECTS/StackedCards/StackedCards"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Component from "./pages/Components"
+import { Test } from "./pages/Test"
+import { AboutMe } from "./components/EFFECTS/AboutMe/AboutMe"
 
 function App() {
 
   return (
-    <div className="w-full">
-      {/* <CircularGalleryEffect />  */}
-      {/* <OnHoverBigRectangles /> */}
-      <HorizontalAutoScroll />
-      <StackedCards />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/components" element={<Component />} />
+        <Route path="AboutMe" element={<AboutMe />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
