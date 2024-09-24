@@ -1,10 +1,8 @@
-import { AboutMe } from '@/components/EFFECTS/AboutMe/AboutMe'
-import React from 'react'
+import { DynamicTextArea } from "@/components/EFFECTS/DynamicTextArea/DynamicTextArea"
 
 export const Test = () => {
+
   return (
-    <div>
-        <AboutMe />
-    </div>
+    <DynamicTextArea />
   )
 }
