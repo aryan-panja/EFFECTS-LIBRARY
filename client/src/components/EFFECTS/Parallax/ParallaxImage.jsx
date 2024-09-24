@@ -41,3 +41,49 @@ export const ParallaxImage = ({ speed = 20, img, className }) => {
     </div>
   );
 };
+
+
+{/* <div 
+  class="relative z-10 overflow-hidden h-[200px] w-[200px]" 
+  id="imageContainer"
+>
+  <img 
+    src="https://picsum.photos/200" 
+    alt="image"
+    id="hoverImage"
+    class="duration-500 -z-10"
+  >
+</div>
+
+<script>
+  const imageContainer = document.getElementById('imageContainer');
+  const hoverImage = document.getElementById('hoverImage');
+
+  imageContainer.addEventListener('mouseenter', (e) => {
+    const rect = imageContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left; // mouse x position relative to the container
+    const y = e.clientY - rect.top;  // mouse y position relative to the container
+    const w = rect.width;
+    const h = rect.height;
+
+    // Determine the entry side based on mouse position
+    if (x < w / 4) {
+      // Mouse entered from the left
+      hoverImage.style.transform = "translateX(10px)";
+    } else if (x > (3 * w) / 4) {
+      // Mouse entered from the right
+      hoverImage.style.transform = "translateX(-10px)";
+    } else if (y < h / 4) {
+      // Mouse entered from the top
+      hoverImage.style.transform = "translateY(10px)";
+    } else if (y > (3 * h) / 4) {
+      // Mouse entered from the bottom
+      hoverImage.style.transform = "translateY(-10px)";
+    }
+  });
+
+  imageContainer.addEventListener('mouseleave', () => {
+    // Reset transform when the mouse leaves the container
+    hoverImage.style.transform = "translate(0)";
+  });
+</script> */}
