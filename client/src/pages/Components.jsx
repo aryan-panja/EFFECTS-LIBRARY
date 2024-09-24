@@ -12,16 +12,17 @@ import { DynamicTextAreaExample } from "@/Examples/DynamicTextAreaExample"
 export default function Component() {
   const [selectedComponent, setSelectedComponent] = useState("ParallaxImage")
   const components = {
-    ParallaxImage: <ParallaxImageExample />,
-    ParallaxImageButton: <ParallaxImageButtonExample />,
-    OnHoverBigRectangles: <OnHoverBigRectanglesExample />,
-    StackedCards: <StackedCardsExample />,
-    CircularGalleryEffect: <CircularGalleryEffectExample />,
-    ScrollFadeIn: <ScrollFadeInExample />,
-    DynamicTextArea: <DynamicTextAreaExample />,
+    "Parallax Image": <ParallaxImageExample />,
+    "Parallax Image Button": <ParallaxImageButtonExample />,
+    "OnHover Big Rectangles": <OnHoverBigRectanglesExample />,
+    "Stacked Cards": <StackedCardsExample />,
+    "Circular Gallery": <CircularGalleryEffectExample />,
+    "Scroll Animation": <ScrollFadeInExample />,
+    "Dynamic TextArea": <DynamicTextAreaExample />,
   }
+
   return (
-    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
+    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr] overflow-hidden">
       <div className="flex flex-col border-r bg-muted/40">
         <div className="flex h-[60px] items-center border-b px-6">
           <h1 className="text-lg font-semibold">Components</h1>
@@ -42,11 +43,11 @@ export default function Component() {
           </ul>
         </nav>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col max-h-screen overflow-auto">
         <div className="flex h-[60px] items-center border-b bg-muted/40 px-6">
           <h2 className="text-lg font-semibold">{selectedComponent}</h2>
         </div>
-        <div>{components[selectedComponent]}</div>
+        <div className="flex-1">{components[selectedComponent]}</div>
       </div>
     </div>
   )
