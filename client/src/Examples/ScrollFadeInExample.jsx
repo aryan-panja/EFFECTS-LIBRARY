@@ -62,7 +62,7 @@ export const ScrollFadeInExample = () => {
           <ScrollFadeIn key={index} duration={'800ms'} className={'w-11/12'}>
             <div className='flex my-4 rounded space-x-10 w-full'>
               {
-                [1,2,3,4,5,6,7,8,9,10].map((i) => (
+                [1,2,3,4,5,6,7].map((i) => (
                   <Cards color={color} />
                 ))
               }
