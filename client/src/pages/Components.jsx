@@ -6,6 +6,8 @@ import { OnHoverBigRectanglesExample } from "@/Examples/OnHoverBigRectanglesExam
 import { StackedCardsExample } from "@/Examples/StackedCardsExample"
 import { CircularGalleryEffectExample } from "@/Examples/CircularGalleryEffectExample"
 import { AboutMe } from "@/components/EFFECTS/AboutMe/AboutMe"
+import { ScrollFadeInExample } from "@/Examples/ScrollFadeInExample"
+import { DynamicTextAreaExample } from "@/Examples/DynamicTextAreaExample"
 
 export default function Component() {
   const [selectedComponent, setSelectedComponent] = useState("ParallaxImage")
@@ -15,6 +17,8 @@ export default function Component() {
     OnHoverBigRectangles: <OnHoverBigRectanglesExample />,
     StackedCards: <StackedCardsExample />,
     CircularGalleryEffect: <CircularGalleryEffectExample />,
+    ScrollFadeIn: <ScrollFadeInExample />,
+    DynamicTextArea: <DynamicTextAreaExample />,
   }
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
