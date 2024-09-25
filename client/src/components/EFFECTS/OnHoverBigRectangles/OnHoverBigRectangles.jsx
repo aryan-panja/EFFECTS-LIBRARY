@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const OnHoverBigRectangles = () => {
+export const OnHoverBigRectangles = ({src}) => {
     return (
         <div
             className='group mt-10 border-2 h-[400px] w-[150px] bg-cover bg-center duration-700 ease-in-out 
                     sm:w-[200px] sm:hover:w-[300px]  /* Tablet and up */
                     md:w-[150px] md:hover:w-[400px] /* Desktop */
                     hover:w-[350px] hover:scale-105 rounded-xl relative shadow-lg transition-all'
-            style={{ backgroundImage: `url(https://picsum.photos/200/300)` }}
+            style={{ backgroundImage: `url(${src})` }}
         >
             {/* Text changes on hover */}
             <h1 className='absolute left-7 bottom-4 text-white font-bold origin-bottom-left -rotate-90 transition-opacity duration-500 group-hover:opacity-0'>

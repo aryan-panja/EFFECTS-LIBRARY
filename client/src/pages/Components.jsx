@@ -9,6 +9,7 @@ import { AboutMe } from "@/components/EFFECTS/AboutMe/AboutMe"
 import { ScrollFadeInExample } from "@/Examples/ScrollFadeInExample"
 import { DynamicTextAreaExample } from "@/Examples/DynamicTextAreaExample"
 import { SearchBarExamples } from "@/Examples/SearchBarExamples"
+import { ViewMoreExample } from "@/Examples/ViewMoreExample"
 
 export default function Component() {
   const [selectedComponent, setSelectedComponent] = useState("Parallax Image")
@@ -21,6 +22,7 @@ export default function Component() {
     "Scroll Animation": <ScrollFadeInExample />,
     "Dynamic TextArea": <DynamicTextAreaExample />,
     "Search Bar": <SearchBarExamples />,
+    "View More": <ViewMoreExample />,
   }
 
   return (

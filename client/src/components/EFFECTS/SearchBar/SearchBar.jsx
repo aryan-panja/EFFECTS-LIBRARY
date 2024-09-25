@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -268,7 +268,7 @@ export const SearchBar = ({ className, recents, searchData }) => {
     };
 
     // Add event listener for clicks outside of the search bar
-    React.useEffect(() => {
+    useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
             document.removeEventListener('click', handleClickOutside);
@@ -279,17 +279,17 @@ export const SearchBar = ({ className, recents, searchData }) => {
         <div ref={inputRef} className="relative flex flex-col items-center justify-center group">
             <input
                 type="text"
-                className={cn('border-2 w-96 relative rounded-xl p-2', className)}
+                className={cn('border-2 w-96 relative rounded-xl p-2 text-black', className)}
                 value={searchWord}
                 onChange={(e) => setSearchWord(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 placeholder="Type to search..."
             />
-            <Search className="absolute top-2 right-2" />
+            <Search className="absolute top-2 right-2 text-black" />
 
             {/* The suggestion box */}
             {(isFocused || searchWord) && (
-                <div className="mt-4 mb-4 max-h-60 max-w-80 opacity-100 border-2 shadow-lg bg-white absolute top-full w-full z-10">
+                <div className="mt-4 mb-4 max-h-60 max-w-80 opacity-100 border-2 shadow-lg bg-white text-black absolute top-full w-full z-10">
                     {showData.length > 0 ? (
                         <ul className="flex flex-col gap-y-2 max-h-60 max-w-80 overflow-y-auto p-2">
                             {showData.map((item, index) => (
