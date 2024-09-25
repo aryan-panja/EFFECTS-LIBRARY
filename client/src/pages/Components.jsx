@@ -8,9 +8,10 @@ import { CircularGalleryEffectExample } from "@/Examples/CircularGalleryEffectEx
 import { AboutMe } from "@/components/EFFECTS/AboutMe/AboutMe"
 import { ScrollFadeInExample } from "@/Examples/ScrollFadeInExample"
 import { DynamicTextAreaExample } from "@/Examples/DynamicTextAreaExample"
+import { SearchBarExamples } from "@/Examples/SearchBarExamples"
 
 export default function Component() {
-  const [selectedComponent, setSelectedComponent] = useState("ParallaxImage")
+  const [selectedComponent, setSelectedComponent] = useState("Parallax Image")
   const components = {
     "Parallax Image": <ParallaxImageExample />,
     "Parallax Image Button": <ParallaxImageButtonExample />,
@@ -19,6 +20,7 @@ export default function Component() {
     "Circular Gallery": <CircularGalleryEffectExample />,
     "Scroll Animation": <ScrollFadeInExample />,
     "Dynamic TextArea": <DynamicTextAreaExample />,
+    "Search Bar": <SearchBarExamples />,
   }
 
   return (
