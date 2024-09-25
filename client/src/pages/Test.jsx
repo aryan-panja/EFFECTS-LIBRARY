@@ -1,8 +1,8 @@
-import { DynamicTextArea } from "@/components/EFFECTS/DynamicTextArea/DynamicTextArea"
+import { SearchBar } from "@/components/EFFECTS/SearchBar/SearchBar"
 
 export const Test = () => {
 
   return (
-    <DynamicTextArea />
+    <SearchBar recents={recents} />
   )
 }
