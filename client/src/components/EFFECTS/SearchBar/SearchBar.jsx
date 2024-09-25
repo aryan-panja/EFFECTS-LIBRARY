@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -268,7 +268,7 @@ export const SearchBar = ({ className, recents, searchData }) => {
     };
 
     // Add event listener for clicks outside of the search bar
-    React.useEffect(() => {
+    useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
             document.removeEventListener('click', handleClickOutside);
