@@ -26,13 +26,13 @@ export default function Component() {
   }
 
   return (
-    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr] overflow-hidden">
-      <div className="flex flex-col border-r bg-muted/40">
+    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr] overflow-hidden bg-black text-white">
+      <div className="flex flex-col border-r overflow-y-auto">
         <div className="flex h-[60px] items-center border-b px-6">
           <h1 className="text-lg font-semibold">Components</h1>
         </div>
         <nav className="flex-1 overflow-auto">
-          <ul className="grid gap-1 p-4">
+          <ul className="grid gap-y-5 p-4">
             {Object.keys(components).map((component) => (
               <li key={component}>
                 <Button
@@ -48,9 +48,6 @@ export default function Component() {
         </nav>
       </div>
       <div className="flex flex-col max-h-screen overflow-auto">
-        <div className="flex h-[60px] items-center border-b bg-muted/40 px-6">
-          <h2 className="text-lg font-semibold">{selectedComponent}</h2>
-        </div>
         <div className="flex-1">{components[selectedComponent]}</div>
       </div>
     </div>
