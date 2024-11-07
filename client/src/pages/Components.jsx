@@ -1,22 +1,14 @@
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { ParallaxImageExample } from "@/Examples/ParallaxImageExample"
 import { ParallaxImageButtonExample } from "@/Examples/ParallaxImageButtonExample"
 import { OnHoverBigRectanglesExample } from "@/Examples/OnHoverBigRectanglesExample"
-import { StackedCardsExample } from "@/Examples/StackedCardsExample"
-import { CircularGalleryEffectExample } from "@/Examples/CircularGalleryEffectExample"
-import { ScrollFadeInExample } from "@/Examples/ScrollFadeInExample"
 import { DynamicTextAreaExample } from "@/Examples/DynamicTextAreaExample"
 import { SearchBarExamples } from "@/Examples/SearchBarExamples"
 import { ViewMoreExample } from "@/Examples/ViewMoreExample"
-import { Search, Menu, X, Code, Eye } from 'lucide-react'
 
 export default function Component() {
   const [selectedComponent, setSelectedComponent] = useState("Parallax Image")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('preview')
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const components = {
     "Parallax Image": <ParallaxImageExample />,
@@ -30,7 +22,11 @@ export default function Component() {
   return (
     <div className="flex bg-black text-white">
       {/* Sidebar */}
-      <div className="sticky top-14 hidden h-[calc(100dvh-theme(spacing.16))] w-[220px] shrink-0 pt-8 md:block lg:pt-12 overflow-y-auto">
+      <div
+        className="sticky top-14 hidden h-[calc(100dvh-theme(spacing.16))] w-[220px] shrink-0 pt-8 md:block lg:pt-12 overflow-y-auto" style={{
+          borderRight: '1px solid #333',
+        }}
+      >
         <nav className="p-4">
           <ul>
             {Object.keys(components).map((component, index) => (
