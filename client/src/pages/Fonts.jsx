@@ -34,8 +34,8 @@ export const Fonts = () => {
     const handleTextColorChangeImage = (color) => setTextColorImage(color.hex);
 
     return (
-        <div className="flex max-md:flex-col h-screen bg-gray-100 dark:bg-gray-900">
-            <div className="w-9/12 max-md:w-full p-8 overflow-auto" style={{ backgroundColor: bgColor }}>
+        <div className="flex max-md:flex-col h-screen bg-gray-100 dark:bg-gray-900 overflow-auto">
+            <div className="w-9/12 max-md:w-full p-8 overflow-auto sticky h-screen" style={{ backgroundColor: bgColor }}>
                 <Card className="w-full h-full bg-transparent shadow-none border-none">
                     <CardContent className="p-6">
                         <h1
@@ -78,7 +78,7 @@ export const Fonts = () => {
                 </Card>
             </div>
 
-            <div className="w-3/12 max-md:w-full z-10 bg-white dark:bg-gray-800 p-6 overflow-y-auto shadow-lg">
+            <div className="w-3/12 sticky h-screen max-md:w-full z-10 bg-white dark:bg-gray-800 p-6 overflow-y-auto shadow-lg">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Text Styler</h2>
 
                 <Textarea

@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 
 [text](https://codyhouse.co/ds/components/app/markdown-editor) - for markdown component.
+
+use shadcn sidebar for its looks.
