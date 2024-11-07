@@ -33,7 +33,7 @@ export default function Component() {
               <h1
                 key={index}
                 href="#"
-                className={`py-2 px-4 my-1 hover:text-white cursor-pointer ${selectedComponent === component ? 'text-white' : 'text-[#cfcfcf]'}`}
+                className={`py-2 px-4 my-1 hover:text-white cursor-pointer ${selectedComponent === component ? 'text-white' : 'text-[#b9b9b9]'}`}
                 onClick={() => setSelectedComponent(component)}
               >
                 {component}
