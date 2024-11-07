@@ -23,7 +23,7 @@ export const DynamicTextArea = ({ targetCharacter = '', targetWord = '', classNa
     return (
       <div className={cn('flex flex-col items-center justify-center w-full', className)}>
         <Textarea 
-          className="w-1/2" 
+          className="w-1/2 text-black" 
           onChange={(e) => setText(e.target.value)} 
           value={text}
         />

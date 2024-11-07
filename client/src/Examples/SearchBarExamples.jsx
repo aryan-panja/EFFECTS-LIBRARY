@@ -14,11 +14,13 @@ export const SearchBarExamples = () => {
     { name: 'Anguilla', code: 'AI' },
     { name: 'Antarctica', code: 'AQ' },
     { name: 'Antigua and Barbuda', code: 'AG' },
-  ]
+  ];
 
   return (
     <div className='w-full flex items-center justify-center'>
-      <SearchBar recents={recents} />
+      <div className='w-1/2'>
+        <SearchBar searchRecents={recents} />
+      </div>
     </div>
   )
 }
