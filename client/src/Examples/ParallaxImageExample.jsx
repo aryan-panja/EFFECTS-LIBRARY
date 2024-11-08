@@ -7,6 +7,13 @@ export const ParallaxImageExample = () => {
 
   return (
     <Wrapper>
+      <div className="mx-auto">
+        <h1 className="text-xl font-bold mb-4">Parallax Image</h1>
+        <p className="mb-8 text-zinc-300">
+          Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+        </p>
+      </div>
+
       <div className="flex flex-col items-center justify-center">
 
         <ParallaxImage className="rounded-xl" />

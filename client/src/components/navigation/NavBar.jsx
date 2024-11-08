@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const NavBar = () => {
     const navButtons = [
         { name: 'Home', link: '/' },
-        { name: 'Components', link: '/components' },
+        { name: 'Components', link: '/components/parallax-image' },
         {name: 'CSS', link: '/css-effects'},
         { name: 'Fonts', link: '/fonts' },
         // { name: 'About Me', link: '/AboutMe' },

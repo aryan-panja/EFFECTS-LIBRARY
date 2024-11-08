@@ -8,6 +8,7 @@ import { NavBar } from "./components/navigation/NavBar";
 import { LandingPageCSS } from "./pages/css-effects/LandingPageCSS";
 import { PinterestEffect } from "./pages/css-effects/PinterestEffect";
 import { Comments } from "./pages/css-effects/Comments";
+import { SideBar } from "./components/navigation/SideBar";
 
 function App() {
   return (
@@ -15,16 +16,21 @@ function App() {
       {/* Navbar is fixed */}
       <NavBar />
       <div className="">
-        {/* Sidebar and content */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/components" element={<Component />} />
           <Route path="/fonts" element={<Fonts />} />
           <Route path="/AboutMe" element={<AboutMe />} />
           <Route path="/test" element={<Test />} />
           <Route path="/css-effects" element={<LandingPageCSS />} />
           <Route path="/css-effects/pinterest-effect" element={<PinterestEffect />} />
           <Route path="/css-effects/comments" element={<Comments />} />
+
+          {/* Components section with sidebar */}
+          <Route path="/components/:component" element={
+            <SideBar>
+              <Component />
+            </SideBar>
+          } />
         </Routes>
       </div>
     </BrowserRouter>
