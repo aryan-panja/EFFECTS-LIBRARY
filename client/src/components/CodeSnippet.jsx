@@ -5,7 +5,7 @@ import githubLogo from '@/assets/github-mark-c791e9551fe4/github-mark/github-mar
 
 export const CodeSnippet = ({code}) => {
     return (
-        <div className="rounded-md mt-20 flex flex-col space-y-2 w-[56rem]">
+        <div className="rounded-md mt-20 flex flex-col space-y-2 w-full">
             <h1 className='border-b border-b-[#4c4b4b] font-semibold text-lg'>
                 Code Snippet
             </h1>
