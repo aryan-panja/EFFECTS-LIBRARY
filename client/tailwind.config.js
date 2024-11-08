@@ -53,8 +53,8 @@ export default {
 			},
 			keyframes: {
 				'shine': {
-					'0%': { 'background-position-x': '-500%' },
-					'100%': { 'background-position-x': '500%' },
+					'0%': { 'background-position': '-200% 0' },
+					'100%': { 'background-position': '200% 0' },
 				},
 				'accordion-down': {
 					from: {
@@ -76,7 +76,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'shine': 'shine 20s linear infinite',
+				'shine': 'shine 5s linear infinite',
 			}
 		}
 	},
