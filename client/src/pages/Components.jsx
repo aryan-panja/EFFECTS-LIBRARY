@@ -7,14 +7,9 @@ import { SearchBarExamples } from "@/Examples/SearchBarExamples";
 import { ViewMoreExample } from "@/Examples/ViewMoreExample";
 import { CalendarExample } from "@/Examples/CalendarExample";
 import { TextShineExample } from "@/Examples/TextShineExample";
-import { useEffect } from "react";
+import { TextAuroraExample } from "@/Examples/TextAuroraExample";
 
 export default function Component() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  
 
   const { component } = useParams();
 
@@ -27,6 +22,7 @@ export default function Component() {
     "view-more": <ViewMoreExample />,
     "calendar": <CalendarExample />,
     "text-shine": <TextShineExample />,
+    "text-aurora": <TextAuroraExample />,
   };
 
   // Get the selected component based on the URL parameter

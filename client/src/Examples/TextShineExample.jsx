@@ -26,7 +26,7 @@ export const TextShineExample = () => {
 
                 <CodeSnippet code={
                     `<TextShine>
-    Welcome to our Open Source Component Library
+     Welcome to our Open Source ncomponent
 </TextShine>
 `} />
 
