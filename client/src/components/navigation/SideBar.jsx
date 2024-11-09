@@ -30,6 +30,7 @@ export const SideBar = ({ children }) => {
             'components': [
                 'Text Shine',
                 'Text Aurora',
+                'Text Form',
             ]
         }
     ];

@@ -8,6 +8,7 @@ import { ViewMoreExample } from "@/Examples/ViewMoreExample";
 import { CalendarExample } from "@/Examples/CalendarExample";
 import { TextShineExample } from "@/Examples/TextShineExample";
 import { TextAuroraExample } from "@/Examples/TextAuroraExample";
+import { TextFormExample } from "@/Examples/TextFormExample";
 
 export default function Component() {
 
@@ -23,6 +24,7 @@ export default function Component() {
     "calendar": <CalendarExample />,
     "text-shine": <TextShineExample />,
     "text-aurora": <TextAuroraExample />,
+    "text-form": <TextFormExample />,
   };
 
   // Get the selected component based on the URL parameter

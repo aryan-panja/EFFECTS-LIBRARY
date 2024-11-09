@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -29,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
@@ -56,10 +58,12 @@
     --chart-5: 340 75% 55%
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -68,7 +72,8 @@
 *::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  background-color: #aaa;
+  /* or add it to the track */
 }
 
 /* Add a thumb */
@@ -77,12 +82,48 @@
 }
 
 code,
-    pre {
-      padding: 5px 20px 5px 5px;
-      line-height: 1.5
-    }
+pre {
+  padding: 5px 20px 5px 5px;
+  line-height: 1.5
+}
 
-    ::selection {
-      color: #ffcffd;
-      background-color: #000
-    }
+::selection {
+  color: #ffcffd;
+  background-color: #000
+}
+
+
+/* Take the stroke-dasharray as a variable, ask to fill it or not */
+
+:root{
+  --user-stroke-dasharray: 830;
+  --user-fill: transparent;
+}
+
+.text-form {
+  fill: transparent;
+  stroke: #ffff;
+  stroke-width: 0.1;
+  stroke-dasharray: var(--user-stroke-dasharray);
+  stroke-dashoffset: 50;
+  animation: textFormAnimation 8s ease-in-out infinite forwards;
+}
+
+@keyframes textFormAnimation {
+  0% {
+    stroke-dashoffset: 830;
+  }
+  30% {
+    fill: transparent;
+  }
+  50% {
+    fill: var(--user-fill);
+    stroke-dashoffset: 0;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 830;
+  }
+}

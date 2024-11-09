@@ -12,7 +12,7 @@ export const CodeSnippet = ({ code = 'sdv', heading = 'Code Snippet' }) => {
 
     const options = {
         // theme: 'rose-pine',
-        defaultLang: 'javascript'
+        defaultLang: 'javascript',
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export const CodeSnippet = ({ code = 'sdv', heading = 'Code Snippet' }) => {
                 .process("```" + code);
 
             setProcessedCode(file.toString());
-            console.log(file.toString());
+            // console.log(file.toString());
         }
 
         processCode();
