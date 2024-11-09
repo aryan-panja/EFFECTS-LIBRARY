@@ -7,8 +7,14 @@ import { SearchBarExamples } from "@/Examples/SearchBarExamples";
 import { ViewMoreExample } from "@/Examples/ViewMoreExample";
 import { CalendarExample } from "@/Examples/CalendarExample";
 import { TextShineExample } from "@/Examples/TextShineExample";
+import { useEffect } from "react";
 
 export default function Component() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   const { component } = useParams();
 
