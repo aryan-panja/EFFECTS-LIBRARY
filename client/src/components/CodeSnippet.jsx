@@ -1,7 +1,8 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { atomOneDark, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import githubLogo from '@/assets/github-mark-c791e9551fe4/github-mark/github-mark-white.png'
+import { vsDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 export const CodeSnippet = ({code, heading = 'Code Snippet'}) => {
     return (
