@@ -29,10 +29,16 @@
     "react-router-dom": "^6.26.2",
     "react-syntax-highlighter": "^15.6.1",
     "react-use-measure": "^2.1.1",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "shiki": "^1.22.2",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.168.0",
     "three-globe": "^2.31.1",
+    "unified": "^11.0.5",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

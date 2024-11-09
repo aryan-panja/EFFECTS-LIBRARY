@@ -16,7 +16,8 @@ export const OnHoverBigRectanglesExample = () => {
                 </ExpandableInfoCardTextAfter>
             </ExpandableInfoCard>
 
-            <CodeSnippet code={`<ExpandableInfoCard src={test1}>
+            <CodeSnippet code={`
+<ExpandableInfoCard src={test1}>
     <ExpandableInfoCardTextBefore>
         <h1>Aryan Panja</h1>
     </ExpandableInfoCardTextBefore>
