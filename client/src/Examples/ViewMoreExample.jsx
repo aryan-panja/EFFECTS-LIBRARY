@@ -18,7 +18,8 @@ export const ViewMoreExample = () => {
                 </ViewMoreTrigger>
             </ViewMore>
 
-            <CodeSnippet code={`<ViewMore>
+            <CodeSnippet code={`
+<ViewMore>
     <ViewMoreImage />
     <ViewMoreTrigger>
         <ViewMoreHeader>

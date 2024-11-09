@@ -22,16 +22,20 @@ export const TextShineExample = () => {
                 {/* SyntaxHighlighter for JSX code display */}
 
                 <CodeSnippet code={
-                `import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React'/>
+                `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
+`} heading='Import in React'/>
 
                 <CodeSnippet code={
-                    `<TextShine>
+                    `
+<TextShine>
      Welcome to our Open Source ncomponent
 </TextShine>
 `} />
 
 <CodeSnippet code={
-                    `// Copy these into your tailwind.config.js file
+                    `
+// Copy these into your tailwind.config.js file
 keyframes: {
         'shine': {
             '0%': { 'background-position': '-200% 0' },
@@ -53,12 +57,14 @@ keyframes: {
             </TextShine>
 
             <CodeSnippet code={
-                `import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React'/>
+                `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React'/>
 
             <CodeSnippet code={
-                    `<TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
+                    `
+<TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     Get Early Access
-</TextShine>
+</TextShine>dfffffffffffffffffffff
 `} />
 
             </div>

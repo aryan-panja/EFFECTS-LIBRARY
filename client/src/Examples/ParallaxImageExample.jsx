@@ -20,7 +20,8 @@ export const ParallaxImageExample = () => {
 
         {/* SyntaxHighlighter for JSX code display */}
         <CodeSnippet code={
-          `import { ParallaxImage } from '@/components/EFFECTS/Parallax/ParallaxImage'
+          `
+import { ParallaxImage } from '@/components/EFFECTS/Parallax/ParallaxImage'
 
 <ParallaxImage className={'rounded-xl'} />
 `} />

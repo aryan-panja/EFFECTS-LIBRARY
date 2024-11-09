@@ -22,10 +22,12 @@ export const TextAuroraExample = () => {
         {/* SyntaxHighlighter for JSX code display */}
 
         <CodeSnippet code={
-          `import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React' />
+          `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React' />
 
         <CodeSnippet code={
-          `<TextAurora>
+          `
+<TextAurora>
   Hello
 </TextAurora>` } />
 
@@ -34,7 +36,8 @@ export const TextAuroraExample = () => {
         </TextAurora>
 
         <CodeSnippet code={
-          `<TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
+          `
+<TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
   Hello
 </TextAurora>` } />
         

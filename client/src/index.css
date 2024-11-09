@@ -75,3 +75,14 @@
 *::-webkit-scrollbar-thumb {
   background: #0e1a23;
 }
+
+code,
+    pre {
+      padding: 5px 20px 5px 5px;
+      line-height: 1.5
+    }
+
+    ::selection {
+      color: #ffcffd;
+      background-color: #000
+    }
