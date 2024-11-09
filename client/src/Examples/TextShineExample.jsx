@@ -62,9 +62,9 @@ import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} head
 
             <CodeSnippet code={
                     `
-<TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+<TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
     Get Early Access
-</TextShine>dfffffffffffffffffffff
+</TextShine>
 `} />
 
             </div>

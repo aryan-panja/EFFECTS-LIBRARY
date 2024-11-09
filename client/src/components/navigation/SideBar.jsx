@@ -44,11 +44,11 @@ export const SideBar = ({ children }) => {
                                 <h3 className="text-lg font-semibold">{section.heading}</h3>
 
                                 {section.components.map((name, index) => (
-                                    <li key={index} className={`py-2 px-4 my-1 ${component === name.replace(/\s+/g, "-").toLowerCase() ? 'text-[#ffff]' : 'text-[#b0b0b0]'} hover:text-white cursor-pointer`}>
-                                        <Link to={`/components/${name.replace(/\s+/g, "-").toLowerCase()}`}>
+                                    <Link to={`/components/${name.replace(/\s+/g, "-").toLowerCase()}`} className="w-full">
+                                        <li key={index} className={`py-2 px-4 my-1 w-full ${component === name.replace(/\s+/g, "-").toLowerCase() ? 'text-[#ffff]' : 'text-[#b0b0b0]'} hover:text-white cursor-pointer`}>
                                             {name}
-                                        </Link>
-                                    </li>
+                                        </li>
+                                    </Link>
                                 ))
                                 }
                             </li>
