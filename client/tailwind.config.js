@@ -56,6 +56,11 @@ export default {
 					'0%': { 'background-position': '-200% 0' },
 					'100%': { 'background-position': '200% 0' },
 				},
+				'wave': {
+					'0%': {'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)'},
+					'50%': {'clip-path': 'polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)'},
+					'100%': {'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)'}
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -77,6 +82,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'shine': 'shine 5s linear infinite',
+				'wave': 'wave 4s ease-in-out infinite'
 			}
 		}
 	},

@@ -22,18 +22,6 @@ export const TextShineExample = () => {
                 {/* SyntaxHighlighter for JSX code display */}
 
                 <CodeSnippet code={
-                `
-import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
-`} heading='Import in React'/>
-
-                <CodeSnippet code={
-                    `
-<TextShine>
-     Welcome to our Open Source ncomponent
-</TextShine>
-`} />
-
-<CodeSnippet code={
                     `
 // Copy these into your tailwind.config.js file
 keyframes: {
@@ -50,17 +38,31 @@ keyframes: {
         'shine': 'shine 5s linear infinite',
     }
 }
-`} heading='Tailwind.config.js'/>
-
-            <TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
-                Get Early Access
-            </TextShine>
-
-            <CodeSnippet code={
                 `
-import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React'/>
+                } heading='Tailwind.config.js' />
 
-            <CodeSnippet code={
+                <CodeSnippet code={
+                    `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
+`} heading='Import in React' />
+
+                <CodeSnippet code={
+                    `
+<TextShine>
+     Welcome to our Open Source ncomponent
+</TextShine>
+`} />
+
+
+                <TextShine className='mt-12 text-sm font-extrabold' style={{ animationDuration: '3s' }}>
+                    Get Early Access
+                </TextShine>
+
+                <CodeSnippet code={
+                    `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React' />
+
+                <CodeSnippet code={
                     `
 <TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
     Get Early Access

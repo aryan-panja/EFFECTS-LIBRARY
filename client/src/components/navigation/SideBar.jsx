@@ -31,6 +31,7 @@ export const SideBar = ({ children }) => {
                 'Text Shine',
                 'Text Aurora',
                 'Text Form',
+                'Wave Text',
             ]
         }
     ];

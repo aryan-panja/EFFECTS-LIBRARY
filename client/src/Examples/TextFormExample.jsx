@@ -102,6 +102,14 @@ import { TextForm } from '@/components/EFFECTS/TextAnimations/TextForm'
 `
                 } />
 
+                <TextForm duration={'4s'} />
+
+                <CodeSnippet code={
+                    `
+<TextForm duration={'4s'} />
+`
+                } />
+
             </div>
         </Wrapper>
     )

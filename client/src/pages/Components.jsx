@@ -9,22 +9,24 @@ import { CalendarExample } from "@/Examples/CalendarExample";
 import { TextShineExample } from "@/Examples/TextShineExample";
 import { TextAuroraExample } from "@/Examples/TextAuroraExample";
 import { TextFormExample } from "@/Examples/TextFormExample";
+import { WaveTextAnimationExample } from "@/Examples/WaveTextAnimationExample";
 
 export default function Component() {
 
   const { component } = useParams();
 
   const components = {
-    "parallax-image": <ParallaxImageExample />,
-    "parallax-image-button": <ParallaxImageButtonExample />,
-    "onhover-big-rectangles": <OnHoverBigRectanglesExample />,
-    "dynamic-textarea": <DynamicTextAreaExample />,
-    "search-bar": <SearchBarExamples />,
-    "view-more": <ViewMoreExample />,
-    "calendar": <CalendarExample />,
-    "text-shine": <TextShineExample />,
-    "text-aurora": <TextAuroraExample />,
-    "text-form": <TextFormExample />,
+    'parallax-image': <ParallaxImageExample />,
+    'parallax-image-button': <ParallaxImageButtonExample />,
+    'onhover-big-rectangles': <OnHoverBigRectanglesExample />,
+    'dynamic-textarea': <DynamicTextAreaExample />,
+    'search-bar': <SearchBarExamples />,
+    'view-more': <ViewMoreExample />,
+    'calendar': <CalendarExample />,
+    'text-shine': <TextShineExample />,
+    'text-aurora': <TextAuroraExample />,
+    'text-form': <TextFormExample />,
+    'wave-text': <WaveTextAnimationExample />,
   };
 
   // Get the selected component based on the URL parameter
