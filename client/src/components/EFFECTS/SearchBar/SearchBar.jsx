@@ -60,11 +60,11 @@ export const SearchBar = ({ className, searchRecents, searchData }) => {
                     onFocus={() => setIsFocused(true)}
                     placeholder="Type to search..."
                 />
-                <Search className="absolute top-2 right-2 text-black pointer-events-none" />
+                <Search className={`absolute ${isFocused ? 'top-[10px]' : 'top-[100%]'} right-2 text-black pointer-events-none duration-500`} />
 
                 {/* The suggestion box */}
                 {isFocused && (
-                    <div className="mt-2 max-h-64 w-full rounded-lg border-2 shadow-lg bg-white text-black absolute top-full z-10 overflow-hidden">
+                    <div className="mt-5 max-h-64 w-full rounded-lg border-2 shadow-lg bg-white text-black absolute top-full z-10 overflow-hidden">
                         {showData.length > 0 ? (
                             <ul className="flex flex-col gap-y-2 max-h-60 overflow-y-auto p-2">
                                 {showData.map((item, index) => (
