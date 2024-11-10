@@ -68,19 +68,21 @@ export const SearchBar = ({ className, searchRecents, searchData }) => {
                         {showData.length > 0 ? (
                             <ul className="flex flex-col gap-y-2 max-h-60 overflow-y-auto p-2">
                                 {showData.map((item, index) => (
-                                    <li key={index} className="cursor-pointer hover:bg-gray-100 p-2" onClick={() => handleClick(index, showData)}>
+                                    <li key={index} className="cursor-pointer hover:bg-gray-100 hover:rounded-lg p-2" onClick={() => handleClick(index, showData)}>
                                         {item.name}
                                     </li>
                                 ))}
                             </ul>
-                        ) : (
+                        ) : searchWord.length<=0 ? (
                             <ul className="flex flex-col gap-y-2 max-h-60 overflow-y-auto p-2">
                                 {recents.map((item, index) => (
-                                    <li key={index} className="cursor-pointer hover:bg-gray-100 p-2" onClick={() => handleClick(index, recents)}>
+                                    <li key={index} className="cursor-pointer hover:bg-gray-100 hover:rounded-lg p-2" onClick={() => handleClick(index, recents)}>
                                         {item.name}
                                     </li>
                                 ))}
                             </ul>
+                        )  : (
+                            <div className='p-2 text-center'>Nothing found</div>
                         )}
                     </div>
                 )}

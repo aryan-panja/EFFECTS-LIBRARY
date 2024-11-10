@@ -98,6 +98,7 @@ pre {
 :root{
   --user-stroke-dasharray: 830;
   --user-fill: transparent;
+  --user-duration: 8s;
 }
 
 .text-form {
@@ -106,7 +107,7 @@ pre {
   stroke-width: 0.1;
   stroke-dasharray: var(--user-stroke-dasharray);
   stroke-dashoffset: 50;
-  animation: textFormAnimation 8s ease-in-out infinite forwards;
+  animation: textFormAnimation var(--user-duration) ease-in-out infinite forwards;
 }
 
 @keyframes textFormAnimation {
