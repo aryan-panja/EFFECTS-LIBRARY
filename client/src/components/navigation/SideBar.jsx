@@ -32,6 +32,7 @@ export const SideBar = ({ children }) => {
                 'Text Aurora',
                 'Text Form',
                 'Wave Text',
+                'Bouncy Reveal'
             ]
         }
     ];

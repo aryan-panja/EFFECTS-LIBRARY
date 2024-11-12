@@ -10,6 +10,7 @@ import { TextShineExample } from "@/Examples/TextShineExample";
 import { TextAuroraExample } from "@/Examples/TextAuroraExample";
 import { TextFormExample } from "@/Examples/TextFormExample";
 import { WaveTextAnimationExample } from "@/Examples/WaveTextAnimationExample";
+import { BouncyRevealExample } from "@/Examples/BouncyRevealExample";
 
 export default function Component() {
 
@@ -27,6 +28,7 @@ export default function Component() {
     'text-aurora': <TextAuroraExample />,
     'text-form': <TextFormExample />,
     'wave-text': <WaveTextAnimationExample />,
+    'bouncy-reveal': <BouncyRevealExample />,
   };
 
   // Get the selected component based on the URL parameter
