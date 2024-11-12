@@ -19,21 +19,10 @@ export const NavBar = () => {
         { name: 'Text Aurora' },
         { name: 'Text Form' },
         { name: 'Wave Text' },
+        { name: 'Bouncy Reveal' },
     ];
 
-    const recents = [
-        { name: 'Parallax Image' },
-        { name: 'Parallax Image Button' },
-        { name: 'OnHover Big Rectangles' },
-        { name: 'Dynamic TextArea' },
-        { name: 'Search Bar' },
-        { name: 'View More' },
-        { name: 'Calendar' },
-        { name: 'Text Shine' },
-        { name: 'Text Aurora' },
-        { name: 'Text Form' },
-        { name: 'Wave Text' },
-    ];
+    const recents = searchData;
 
     const handleSearchSelect = (item) => {
         console.log(item);

@@ -61,6 +61,14 @@ export default {
 					'50%': {'clip-path': 'polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)'},
 					'100%': {'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)'}
 				},
+				'bouncy-reveal': {
+					'0%': {'clip-path': 'circle(0.0% at 50% 50%)'},
+					'20%': {'clip-path': 'circle(15.0% at 50% 50%)'},
+					'40%': {'clip-path': 'circle(10.0% at 50% 50%)'},
+					'60%': {'clip-path': 'circle(40.0% at 50% 50%)'},
+					'80%': {'clip-path': 'circle(20.0% at 50% 50%)'},
+					'100%': {'clip-path': 'circle(100.0% at 50% 50%)'}
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -82,7 +90,8 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'shine': 'shine 5s linear infinite',
-				'wave': 'wave 4s ease-in-out infinite'
+				'wave': 'wave 4s ease-in-out infinite',
+				'bouncy-reveal': 'bouncy-reveal 4s ease-in-out infinite',
 			}
 		}
 	},
