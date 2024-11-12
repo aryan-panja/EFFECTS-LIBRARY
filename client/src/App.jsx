@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       {/* Navbar is fixed */}
       <NavBar />
-      <div className="">
+      <div className="font-mono">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fonts" element={<Fonts />} />
