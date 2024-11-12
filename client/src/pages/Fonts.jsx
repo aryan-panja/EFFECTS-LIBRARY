@@ -36,7 +36,7 @@ export const Fonts = () => {
     return (
         <div className="flex max-md:flex-col h-screen bg-gray-100 dark:bg-gray-900 overflow-auto">
             <div className="w-9/12 max-md:w-full p-8 overflow-auto sticky h-screen" style={{ backgroundColor: bgColor }}>
-                <Card className="w-full h-full bg-transparent shadow-none border-none">
+                <Card className="w-full bg-transparent shadow-none border-none">
                     <CardContent className="p-6">
                         <h1
                             className="text-4xl font-bold mb-10 text-center"
@@ -45,7 +45,7 @@ export const Fonts = () => {
                             Your Text Preview
                         </h1>
                         <p
-                            className="text-xl leading-relaxed whitespace-pre-wrap break-words"
+                            className="text-xl leading-relaxed whitespace-pre-wrap break-words border-0"
                             style={{ fontFamily: font, color: textColor }}
                         >
                             {message || "Your styled text will appear here..."}
@@ -63,11 +63,12 @@ export const Fonts = () => {
 
                                 {/* Overlay Text */}
                                 <h1
-                                    className="absolute top-1/2 text-4xl font-bold text-white"
+                                    className="absolute top-1/2 w-full text-4xl font-bold text-white whitespace-pre-wrap break-words"
                                     style={{
                                         fontFamily: font,
                                         color: textColorImage, // Use user-selected color for text
                                     }}
+                                    contentEditable
                                 >
                                     {messageImage || "Overlay Text"}
                                 </h1>
@@ -78,7 +79,7 @@ export const Fonts = () => {
                 </Card>
             </div>
 
-            <div className="w-3/12 sticky h-screen max-md:w-full z-10 bg-white dark:bg-gray-800 p-6 overflow-y-auto shadow-lg">
+            <div className="w-3/12 h-[calc(100dvh-theme(spacing.16))] top-14 sticky max-md:w-full z-10 bg-white p-6 overflow-y-auto shadow-lg">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Text Styler</h2>
 
                 <Textarea

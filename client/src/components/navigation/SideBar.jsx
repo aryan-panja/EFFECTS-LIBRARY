@@ -38,7 +38,7 @@ export const SideBar = ({ children }) => {
 
     return (
         <div className="flex bg-black text-white">
-            <div className="sticky top-14 hidden h-[calc(100dvh-theme(spacing.16))] shrink-0 pt-8 md:block lg:pt-12 overflow-y-auto" style={{ borderRight: '1px solid #333' }}>
+            <div className="sticky top-14 hidden h-[calc(100dvh-theme(spacing.16))] shrink-0 pt-8 md:block overflow-y-auto" style={{ borderRight: '1px solid #333' }}>
                 <nav className="p-4">
                     <ul>
                         {componentNames.map((section, index) => (

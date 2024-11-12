@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export const SearchBar = ({ className, searchRecents, searchData }) => {
+export const SearchBar = ({ className, searchRecents, searchData, iconColor, onSelect }) => {
     const [searchWord, setSearchWord] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef(null);
@@ -47,20 +47,24 @@ export const SearchBar = ({ className, searchRecents, searchData }) => {
     const handleClick = (i, array) => {
         setSearchWord(`${array[i].name}`);
         setIsFocused(false); // Close the dropdown after selection
+
+        if(onSelect) {
+            onSelect(array[i].name);
+        }
     };
 
     return (
-        <div className='relative w-full'>
+        <div className='relative w-full h-full'>
             <div ref={inputRef} className="relative w-full">
                 <input
                     type="text"
-                    className={cn('border-2 w-full rounded-xl p-2 pr-10 text-black', className)}
+                    className={cn('border-2 w-full rounded-xl p-2 pr-10 text-black pl-5', className)}
                     value={searchWord}
                     onChange={(e) => setSearchWord(e.target.value)}
                     onFocus={() => setIsFocused(true)}
                     placeholder="Type to search..."
                 />
-                <Search className={`absolute ${isFocused ? 'top-[10px]' : 'top-[100%]'} right-2 text-black pointer-events-none duration-500`} />
+                <Search className={`absolute ${isFocused ? 'top-[10px] opacity-100' : 'top-[100%] opacity-0'} right-2 text-[${iconColor}] pointer-events-none duration-500`} />
 
                 {/* The suggestion box */}
                 {isFocused && (
