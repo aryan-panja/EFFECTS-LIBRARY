@@ -9,10 +9,39 @@ import test7 from "@/assets/brand logo/7.webp";
 import test8 from "@/assets/brand logo/8.webp";
 import test9 from "@/assets/brand logo/9.webp";
 import test10 from "@/assets/brand logo/10.webp";
+import { StackedCards } from '../StackedCards/StackedCards';
 
 export function HorizontalAutoScroll() {
 
     const images = [test1, test2, test3, test4, test5, test6, test7, test8, test9, test10];
+
+    const data = [
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+            card3: 'Card Three'
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+        {
+            card1: 'Card One',
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+            card3: 'Card Three'
+        },
+        {
+            card1: 'Card One',
+            card2: 'Card Two',
+        },
+    ];
 
     return (
         <div className='flex'>
@@ -27,6 +56,14 @@ export function HorizontalAutoScroll() {
                     {images.map((image, index) => (
                         <img key={index} src={image} alt="test" className="w-40 h-40" />
                     ))}
+                </InfiniteSlider>
+
+                <InfiniteSlider gap={24}>
+                    {
+                        data.map((stack, index) => (
+                            <StackedCards key={index} stack={stack} verticalGap={56} order={"start"}/>
+                        ))
+                    }
                 </InfiniteSlider>
             </div>
 
