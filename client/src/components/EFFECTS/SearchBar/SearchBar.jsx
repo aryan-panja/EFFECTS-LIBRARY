@@ -54,7 +54,7 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor, onS
     };
 
     return (
-        <div className='relative w-full h-full'>
+        <div className={cn('w-1/2 h-full', className)}>
             <div ref={inputRef} className="relative w-full">
                 <input
                     type="text"
@@ -64,7 +64,7 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor, onS
                     onFocus={() => setIsFocused(true)}
                     placeholder="Type to search..."
                 />
-                <Search className={`absolute ${isFocused ? 'top-[10px] opacity-100' : 'top-[100%] opacity-0'} right-2 text-[${iconColor}] pointer-events-none duration-500`} />
+                <Search className={`absolute ${isFocused ? 'top-[9px] opacity-100' : 'top-[100%] opacity-0'} right-2 text-[${iconColor}] pointer-events-none duration-500`} />
 
                 {/* The suggestion box */}
                 {isFocused && (

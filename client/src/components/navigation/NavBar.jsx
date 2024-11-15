@@ -58,7 +58,7 @@ export const NavBar = () => {
                     }
                 </div>
                 <div className=''>
-                    <SearchBar className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white font-mono'}
+                    <SearchBar className={'text-sm rounded-3xl w-full bg-[#191919] border-[#191919] text-white font-mono'}
                         searchRecents={recents}  // Pass recents as a prop
                         searchData={searchData}  // Pass searchData as a prop
                         onSelect={handleSearchSelect}  // Custom handler for routing

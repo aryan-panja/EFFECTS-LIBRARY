@@ -35,7 +35,7 @@ export const CodeSnippet = ({ code = 'sdv', heading = 'Code Snippet' }) => {
     }, [code]);
 
     return (
-        <div className="rounded-md mt-20 flex flex-col space-y-2 w-full">
+        <div className="rounded-md my-10 flex flex-col space-y-2 w-full">
             <h1 className='border-b border-b-[#4c4b4b] font-semibold text-lg'>
                 {heading}
             </h1>

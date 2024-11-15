@@ -34,6 +34,10 @@ export const SideBar = ({ children }) => {
                 'Wave Text',
                 'Bouncy Reveal'
             ]
+        },
+        {
+            'heading': 'Border Animations',
+            'components': [],
         }
     ];
 
