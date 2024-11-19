@@ -62,6 +62,7 @@ export const NavBar = () => {
                         searchRecents={recents}  // Pass recents as a prop
                         searchData={searchData}  // Pass searchData as a prop
                         onSelect={handleSearchSelect}  // Custom handler for routing
+                        iconColor='#fff'  // Custom icon color
                     />
                 </div>
             </div>
