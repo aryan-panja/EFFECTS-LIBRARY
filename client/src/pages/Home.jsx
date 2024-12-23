@@ -1,7 +1,12 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 export default function Home() {
+
+    useEffect(() => {
+        document.title = "EFFECTS LIBRARY"
+    }, [])
+
     return (
         <div className="flex flex-col min-h-[100dvh] text-white">
             <section className="w-full py-12 md:py-24 lg:py-32">
