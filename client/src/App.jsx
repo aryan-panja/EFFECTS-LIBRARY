@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       {/* Navbar is fixed */}
       <NavBar />
-      <div className="font-mono">
+      <div className="pixelify-sans-text">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fonts" element={<Fonts />} />
