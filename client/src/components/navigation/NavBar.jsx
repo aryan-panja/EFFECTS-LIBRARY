@@ -37,7 +37,7 @@ export const NavBar = () => {
         { name: 'Fonts', link: '/fonts' },
     ]
     return (
-        <div className='sticky top-0 flex justify-between px-10 items-center z-10 bg-black text-white' style={{ borderBottom: '1px solid #333' }}>
+        <div className='sticky top-0 flex justify-between px-10 items-center z-10 bg-black text-white pixelify-sans-text' style={{ borderBottom: '1px solid #333' }}>
             <Link to={'/'} className='text-2xl font-bold'>
                 <TextShine className={'font-bold text-xl tracking-wider'} style={{ animationDuration: '6s' }}>
                     EFFECTS-LIBRARY
@@ -48,7 +48,6 @@ export const NavBar = () => {
                     {
                         navButtons.map((i, index) => (
                             <Link
-                                className='font-mono'
                                 to={i.link}
                                 key={index}
                             >
@@ -58,7 +57,7 @@ export const NavBar = () => {
                     }
                 </div>
                 <div className=''>
-                    <SearchBar className={'text-sm rounded-3xl w-full bg-[#191919] border-[#191919] text-white font-mono'}
+                    <SearchBar className={'text-sm rounded-3xl w-full bg-[#191919] border-[#191919] text-white'}
                         searchRecents={recents}  // Pass recents as a prop
                         searchData={searchData}  // Pass searchData as a prop
                         onSelect={handleSearchSelect}  // Custom handler for routing

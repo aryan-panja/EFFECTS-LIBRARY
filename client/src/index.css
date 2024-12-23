@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,800;1,14..32,800&family=Pixelify+Sans:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,6 +69,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.pixelify-sans-text {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 20;
+  font-style: normal;
 }
 
 *::-webkit-scrollbar {
