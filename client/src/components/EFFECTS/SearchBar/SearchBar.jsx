@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export const SearchBar = ({ className, searchRecents, searchData, iconColor='#000', onSelect }) => {
+export const SearchBar = ({ className, searchRecents, searchData, iconColor='#000', onSelect, ...props }) => {
     const [searchWord, setSearchWord] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef(null);
@@ -45,6 +45,7 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
     }, []);
 
     const handleClick = (i, array) => {
+        if(array.length <= 0) return;
         setSearchWord(`${array[i].name}`);
         setIsFocused(false); // Close the dropdown after selection
 
@@ -60,9 +61,11 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
                     type="text"
                     className={cn('border-2 w-full rounded-xl p-2 pr-10 text-black pl-5', className)}
                     value={searchWord}
-                    onChange={(e) => setSearchWord(e.target.value)}
+                    onChange={(e) => {setIsFocused(true); setSearchWord(e.target.value)}}
                     onFocus={() => setIsFocused(true)}
+                    onKeyDown={(e) => {if(e.key === 'Enter' ) handleClick(0, showData)}}
                     placeholder="Type to search..."
+                    {...props}
                 />
                 <Search className={`absolute ${isFocused ? 'top-[9px] opacity-100' : 'top-[100%] opacity-0'} right-2 pointer-events-none duration-500`} style={{color: iconColor}}/>
 
