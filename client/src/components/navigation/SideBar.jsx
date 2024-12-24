@@ -22,6 +22,8 @@ export const SideBar = ({ children }) => {
                 'Dynamic TextArea',
                 'Search Bar',
                 'View More',
+                'Rating',
+                'Dropdown',
                 // 'Calendar'
             ]
         },

@@ -1,47 +1,84 @@
-import React, { useState } from 'react'
+/*
+making a dropdown menu
+1. parent dic containing the dropdown
+2. 1st chifl dive giving the name of the dropdown
+3. 2nd child div containing the dropdown menu
 
-export const DropDown = () => {
+example - 
+<DropDown>
+    <Header>Dropdown</Header>
+    <List>
+        <ListItem>Option 1</ListItem>
+        <ListItem>Option 2</ListItem>
+        <ListItem>Option 3</ListItem>
+    </List>
+</DropDown>
 
-    const countries = [
-        {name: 'India', code: 'IN', states: [
-            'Delhi',
-            'Punjab',
-            'U.P'
-        ]},
-        {name: 'Pakistan', code: 'PAK', states: [
-            'Lahore',
-            'Punjab',
-        ]},
-        {name: 'China', code: 'XN', states: [
-            'Beijing',
-        ]}
-    ]
-    const [country, setCountry] = useState('');
-    const [state, setState] = useState('');
+*/
 
-    const [allStates, setAllStates] = useState();
+import React, { useState } from 'react';
+import { cn } from '@/lib/utils';
 
-    
+const DropDown = ({ children, className }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className=' flex gap-x-5'>
-        <select name="" id="" value={country} onChange={(e)=>{setCountry(e.target.value)
-            setAllStates(countries.filter((i)=>i.name===country))
-            console.log("allStates = ", allStates)
-        }}>
-            {countries.map((item, index)=>(
-                <option value={item.name}>{item.name}</option>
-            ))}
-        </select>
-        {
-            
-            <select value={state} onChange={(e)=>setState(e.target.value)}>
-                {allStates.map((item, index)=>(
-                    <option value={item}>{item}</option>
-                ))}
-            </select>
-        }
+    <div className={cn("relative inline-block", className)}>
+      {React.Children.map(children, (child) =>
+        React.cloneElement(child, { isOpen, toggleDropdown })
+      )}
     </div>
-  )
-}
+  );
+};
+
+const DropDownTrigger = React.forwardRef(({ toggleDropdown, className, children, ...props }, ref) => (
+  <button
+    ref={ref}
+    onClick={toggleDropdown}
+    className={cn(
+      "px-4 py-2 bg-white border rounded-md shadow-md text-sm text-gray-700 hover:bg-gray-100 focus:outline-none",
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </button>
+));
+DropDownTrigger.displayName = 'DropDownTrigger';
+
+const DropDownMenu = React.forwardRef(({ isOpen, className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "absolute mt-2 left-0 w-56 bg-white border border-gray-200 rounded-md shadow-lg transition-transform duration-300 ease-in-out",
+      {
+        "opacity-100 scale-100": isOpen,
+        "opacity-0 scale-95 pointer-events-none": !isOpen,
+      },
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </div>
+));
+DropDownMenu.displayName = 'DropDownMenu';
+
+const DropDownItem = React.forwardRef(({ onClick, className, children, ...props }, ref) => (
+  <button
+    ref={ref}
+    onClick={onClick}
+    className={cn(
+      "block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none",
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </button>
+));
+DropDownItem.displayName = 'DropDownItem';
+
+export { DropDown, DropDownTrigger, DropDownMenu, DropDownItem };

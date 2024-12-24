@@ -90,6 +90,11 @@
   background: #0e1a23;
 }
 
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 code,
 pre {
   padding: 5px 20px 5px 5px;

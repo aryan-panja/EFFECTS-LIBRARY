@@ -11,6 +11,8 @@ import { TextAuroraExample } from "@/Examples/TextAuroraExample";
 import { TextFormExample } from "@/Examples/TextFormExample";
 import { WaveTextAnimationExample } from "@/Examples/WaveTextAnimationExample";
 import { BouncyRevealExample } from "@/Examples/BouncyRevealExample";
+import { RatingsExample } from "@/Examples/RatingsExample";
+import { DropDownExample } from "@/Examples/DropDownExample";
 
 export default function Component() {
 
@@ -23,7 +25,9 @@ export default function Component() {
     'dynamic-textarea': <DynamicTextAreaExample />,
     'search-bar': <SearchBarExamples />,
     'view-more': <ViewMoreExample />,
-    'calendar': <CalendarExample />,
+    'rating': <RatingsExample />,
+    'dropdown': <DropDownExample />,
+    // 'calendar': <CalendarExample />,
     'text-shine': <TextShineExample />,
     'text-aurora': <TextAuroraExample />,
     'text-form': <TextFormExample />,
