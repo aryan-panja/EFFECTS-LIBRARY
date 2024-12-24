@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { TextShine } from '../EFFECTS/TextAnimations/TextShine'
 import { SearchBar } from '../EFFECTS/SearchBar/SearchBar'
@@ -8,6 +8,7 @@ export const NavBar = () => {
     const navigate = useNavigate();
 
     const searchData = [
+        {name: 'Home'},
         { name: 'Parallax Image' },
         { name: 'Parallax Image Button' },
         { name: 'OnHover Big Rectangles' },
@@ -26,8 +27,26 @@ export const NavBar = () => {
 
     const recents = searchData;
 
+    // on alt + f user can search on searchbar
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+
+            if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                document.getElementById('search-bar').focus();
+            }
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     const handleSearchSelect = (item) => {
-        console.log(item);
+        if(item === 'Home') {
+            navigate('/');
+            return;
+        }
         const route = `/components/${item.replace(/\s+/g, "-").toLowerCase()}`;
         navigate(route);
     };
@@ -60,6 +79,7 @@ export const NavBar = () => {
                 </div>
                 <div className=''>
                     <SearchBar className={'text-sm rounded-3xl w-full bg-[#191919] border-[#191919] text-white'}
+                        id='search-bar'
                         searchRecents={recents}  // Pass recents as a prop
                         searchData={searchData}  // Pass searchData as a prop
                         onSelect={handleSearchSelect}  // Custom handler for routing
