@@ -10,10 +10,13 @@ export default function Home() {
     useEffect(() => {
         document.title = "EFFECTS LIBRARY"
 
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 0);
     }, [])
 
     return (
+        // open source then effects library
         <div>
             {/* Hero Section */}
             <motion.section
