@@ -22,10 +22,10 @@ export const TextFormExample = () => {
         <Wrapper>
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Text Form</h1>
-                <p className="mb-8 text-zinc-300">
+                <p className="mb-8 roboto-regular">
                     Here is the Parallax Image example. Switch between different components to see more effects and layouts.
                 </p>
-                <p>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
+                <p className='roboto-regular'>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
 
             </div>
 
