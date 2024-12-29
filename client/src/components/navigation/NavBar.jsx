@@ -17,6 +17,7 @@ export const NavBar = () => {
         { name: 'View More' },
         { name: 'Rating' },
         { name: 'Dropdown' },
+        { name: 'Rolling Animation' },
         // { name: 'Calendar' },
         { name: 'Text Shine' },
         { name: 'Text Aurora' },

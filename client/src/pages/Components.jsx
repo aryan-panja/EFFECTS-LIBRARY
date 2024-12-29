@@ -13,6 +13,7 @@ import { WaveTextAnimationExample } from "@/Examples/WaveTextAnimationExample";
 import { BouncyRevealExample } from "@/Examples/BouncyRevealExample";
 import { RatingsExample } from "@/Examples/RatingsExample";
 import { DropDownExample } from "@/Examples/DropDownExample";
+import { RollingAnimationExample } from "@/Examples/RollingAnimationExample";
 
 export default function Component() {
 
@@ -27,6 +28,7 @@ export default function Component() {
     'view-more': <ViewMoreExample />,
     'rating': <RatingsExample />,
     'dropdown': <DropDownExample />,
+    'rolling-animation': <RollingAnimationExample />,
     // 'calendar': <CalendarExample />,
     'text-shine': <TextShineExample />,
     'text-aurora': <TextAuroraExample />,
