@@ -32,14 +32,14 @@ export const SearchBarExamples = () => {
     <Wrapper>
       <div className="mx-auto">
         <h1 className="text-xl font-bold mb-4">Search Bar</h1>
-        <p className="my-8 text-zinc-300">
+        <p className="my-8 text-zinc-300 roboto-regular">
           Here is the Parallax Image example. Switch between different components to see more effects and layouts.
         </p>
       </div>
 
       <div className="flex flex-col items-center justify-center">
 
-        <p className="my-8 text-zinc-300">
+        <p className="my-8 text-zinc-300 roboto-regular">
           Example - Here is the search bar where you can send the props of search data and recent history as we can see in Youtube or Google searchbar.
         </p>
 
@@ -71,7 +71,7 @@ const recents = [
 `
         } />
 
-        <p className="my-8 text-zinc-300">
+        <p className="my-8 roboto-regular">
           Example - Here is the search bar where you are just sending the search data and the search input will be searched from this data.
         </p>
 

@@ -15,7 +15,7 @@ export const ViewMoreExample = () => {
         <Wrapper>
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">View More</h1>
-                <p className="my-8 text-zinc-300">
+                <p className="my-8 roboto-regular">
                     Here is the Parallax Image example. Switch between different components to see more effects and layouts.
                 </p>
             </div>

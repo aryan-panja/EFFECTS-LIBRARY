@@ -24,6 +24,7 @@ export const SideBar = ({ children }) => {
                 'View More',
                 'Rating',
                 'Dropdown',
+                'Rolling Animation',
                 // 'Calendar'
             ]
         },
