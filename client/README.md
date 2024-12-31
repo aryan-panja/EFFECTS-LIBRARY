@@ -54,3 +54,5 @@ That's a great project idea! Here are some unique component ideas for your Tailw
 20. **Accordion with Icon Animation**: An accordion component where icons (such as + or -) animate in sync with the opening and closing of sections, adding a smooth, polished feel.
 
 Each of these components could be built with modularity and configurability in mind, allowing users to customize them to fit their designs effortlessly.
+
+update the readme
