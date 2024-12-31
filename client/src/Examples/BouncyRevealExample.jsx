@@ -9,7 +9,7 @@ export const BouncyRevealExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Wave Text</h1>
                 <p className="mb-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the Bouncy Reveal example.
                 </p>
                 <p className='roboto-regular'>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
 
@@ -23,8 +23,9 @@ export const BouncyRevealExample = () => {
 
                 {/* SyntaxHighlighter for JSX code display */}
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 // Copy these into your tailwind.config.js file
 keyframes: {
         'bouncy-reveal': {
@@ -45,45 +46,61 @@ keyframes: {
     }
 }
                 `
-                } heading='Tailwind.config.js' />
+                    }
+                    heading='Tailwind.config.js'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import { BouncyReveal } from '@/components/EFFECTS/TextAnimations/BouncyReveal'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <BouncyReveal>
     Hello
 </BouncyReveal>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
+                />
 
                 <BouncyReveal className={'font-bold'} color='#ffff'>
                     Hello
                 </BouncyReveal>
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <BouncyReveal className={'font-bold'} color='#ffff'>
     Hello
 </BouncyReveal>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
+                />
 
                 <BouncyReveal className={'font-bold'} color='#ffff' stroke={'#0000'}>
                     aryan
                 </BouncyReveal>
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <BouncyReveal className={'font-bold'} color='#ffff' stroke={'#0000'}>
     Hello
 </BouncyReveal>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
+                />
 
             </div>
         </Wrapper>

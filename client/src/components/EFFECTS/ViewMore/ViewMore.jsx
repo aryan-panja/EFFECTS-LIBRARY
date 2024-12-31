@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import test1 from "@/assets/photos/1.jpg";
 import { cn } from '@/lib/utils';
 
-const ViewMore = ({ children, className }) => {
+const ViewMore = ({ children, className, ...props }) => {
   const [active, setActive] = useState(true);
 
   const toggleActive = () => setActive((prev) => !prev);
 
   return (
-    <div className={cn(`h-[400px] w-[300px] rounded-xl relative overflow-hidden ${active ? 'active' : ''}`, className)}>
+    <div className={cn(`h-[400px] w-[300px] rounded-xl relative overflow-hidden ${active ? 'active' : ''}`, className)} {...props}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, { active, toggleActive })
       )}
@@ -45,7 +45,7 @@ const ViewMoreTrigger = React.forwardRef(({ toggleActive, active, className, chi
 ViewMoreTrigger.displayName = 'ViewMoreTrigger';
 
 const ViewMoreHeader = React.forwardRef(({ active, className, children, ...props }, ref) => (
-  <h1 className="text-center text-lg font-bold mt-2 text-black">
+  <h1 className="text-center text-lg font-bold mt-2 text-black" {...props}>
     {active ? "View Less" : (children || "View More")}
   </h1>
 ));

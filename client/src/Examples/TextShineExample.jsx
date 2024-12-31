@@ -9,7 +9,7 @@ export const TextShineExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Text Shine</h1>
                 <p className="mb-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the Text Shine example. You can see this animation working with our logo above.
                 </p>
             </div>
 
@@ -21,8 +21,9 @@ export const TextShineExample = () => {
 
                 {/* SyntaxHighlighter for JSX code display */}
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 // Copy these into your tailwind.config.js file
 keyframes: {
         'shine': {
@@ -39,35 +40,55 @@ keyframes: {
     }
 }
                 `
-                } heading='Tailwind.config.js' />
+                    }
+                    heading='Tailwind.config.js'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
-`} heading='Import in React' />
+`
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <TextShine>
      Welcome to our Open Source ncomponent
 </TextShine>
-`} />
-
+`
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
+                />
 
                 <TextShine className='mt-12 text-sm font-extrabold' style={{ animationDuration: '3s' }}>
                     Get Early Access
                 </TextShine>
 
-                <CodeSnippet code={
-                    `
-import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React' />
+                <CodeSnippet
+                    code={
+                        `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
     Get Early Access
 </TextShine>
-`} />
+`
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
+                />
 
             </div>
         </Wrapper>

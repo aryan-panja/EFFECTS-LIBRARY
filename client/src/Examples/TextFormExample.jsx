@@ -18,33 +18,37 @@ While using this componet send
 
 
 export const TextFormExample = () => {
-    return (
-        <Wrapper>
-            <div className="mx-auto">
-                <h1 className="text-xl font-bold mb-4">Text Form</h1>
-                <p className="mb-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
-                </p>
-                <p className='roboto-regular'>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
+  return (
+    <Wrapper>
+      <div className="mx-auto">
+        <h1 className="text-xl font-bold mb-4">Text Form</h1>
+        <p className="mb-8 roboto-regular">
+          Here is the Text Form example. This is a text animation where the text fills with the color. The user can choose the color and the duration of the animation.
+        </p>
+        <p className='roboto-regular'>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
 
-            </div>
+      </div>
 
-            <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
 
-                <TextForm fill={'#ffff'} />
+        <TextForm fill={'#ffff'} duration={'5s'} />
 
-                <CodeSnippet code={
-                    `
+        <CodeSnippet
+          code={
+            `
 // Also to use this animation you have to choose the stroke till the point it fills their border entirely to give better look.
 
 --user-stroke-dasharray: 830;
                     `
-                } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-                {/* SyntaxHighlighter for JSX code display */}
+        {/* SyntaxHighlighter for JSX code display */}
 
-                <CodeSnippet code={
-                    `
+        <CodeSnippet
+          code={
+            `
 :root{
   --user-stroke-dasharray: 830;
   --user-fill: transparent;
@@ -78,39 +82,53 @@ export const TextFormExample = () => {
   }
 }
 `
-                }
-                    heading='Copy Paste in the Main.css or Index.css File' />
+          }
+          heading='Copy Paste in the Main.css or Index.css File'
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-                <CodeSnippet code={
-                    `
+        <CodeSnippet
+          code={
+            `
 import { TextForm } from '@/components/EFFECTS/TextAnimations/TextForm'
 `
-                }
-                    heading='Import in React' />
+          }
+          heading='Import in React'
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-                <CodeSnippet code={
-                    `
-<TextForm fill={'#ffff'}/>
+        <CodeSnippet
+          code={
+            `
+<TextForm fill={'#ffff'} duration={'5s'} />
 `
-                } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-                <TextForm />
+        <TextForm />
 
-                <CodeSnippet code={
-                    `
+        <CodeSnippet
+          code={
+            `
 <TextForm />
 `
-                } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-                <TextForm duration={'4s'} />
+        <TextForm duration={'4s'} />
 
-                <CodeSnippet code={
-                    `
+        <CodeSnippet
+          code={
+            `
 <TextForm duration={'4s'} />
 `
-                } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
+        />
 
-            </div>
-        </Wrapper>
-    )
+      </div>
+    </Wrapper>
+  )
 }

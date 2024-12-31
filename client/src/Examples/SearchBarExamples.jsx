@@ -33,7 +33,7 @@ export const SearchBarExamples = () => {
       <div className="mx-auto">
         <h1 className="text-xl font-bold mb-4">Search Bar</h1>
         <p className="my-8 text-zinc-300 roboto-regular">
-          Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+          Here is the SearchBar example. Now apply searchbar functionality of recents searched items like you see in Youtube with this element.
         </p>
       </div>
 
@@ -46,14 +46,19 @@ export const SearchBarExamples = () => {
         <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
 
         {/* SyntaxHighlighter for JSX code display */}
-        <CodeSnippet code={
-          `
+        <CodeSnippet
+          code={
+            `
 import { SearchBar } from '@/components/EFFECTS/SearchBar/SearchBar'
 
 `
-        } heading='Import in React' />
+          }
+          heading='Import in React'
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
+        />
 
-        <CodeSnippet code={`
+        <CodeSnippet
+          code={`
 const recents = [
     { name: 'Afghanistan', code: 'AF' },
     { name: 'Åland Islands', code: 'AX' },
@@ -69,7 +74,9 @@ const recents = [
 
 <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
 `
-        } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
+        />
 
         <p className="my-8 roboto-regular">
           Example - Here is the search bar where you are just sending the search data and the search input will be searched from this data.
@@ -77,12 +84,13 @@ const recents = [
 
         <SearchBar searchData={data} iconColor={'#000'} />
 
-        {/* SyntaxHighlighter for JSX code display */}
-
-        <CodeSnippet code={`
+        <CodeSnippet
+          code={`
 <SearchBar searchData={data} iconColor={'#000'} />
 `
-        } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
+        />
 
       </div>
     </Wrapper>

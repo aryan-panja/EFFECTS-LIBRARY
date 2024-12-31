@@ -16,7 +16,7 @@ export const ViewMoreExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">View More</h1>
                 <p className="my-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the View More example. Add this element to your website to show more content when the user clicks on the Read More button.
                 </p>
             </div>
 
@@ -36,8 +36,9 @@ export const ViewMoreExample = () => {
                 </ViewMore>
 
                 {/* SyntaxHighlighter for JSX code display */}
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import {
     ViewMore,
     ViewMoreContent,
@@ -46,9 +47,13 @@ import {
     ViewMoreTrigger
 } from '@/components/EFFECTS/ViewMore/ViewMore'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/ViewMore/ViewMore.jsx'
+                />
 
-                <CodeSnippet code={`
+                <CodeSnippet
+                    code={`
 <ViewMore>
     <ViewMoreImage />
     <ViewMoreTrigger>
@@ -61,7 +66,9 @@ import {
         </ViewMoreContent>
     </ViewMoreTrigger>
 </ViewMore>`
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/ViewMore/ViewMore.jsx'
+                />
 
             </div>
         </Wrapper>

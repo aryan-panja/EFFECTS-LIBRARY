@@ -12,7 +12,7 @@ export const RollingAnimationExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">View More</h1>
                 <p className="my-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the Rolling Animation example.
                 </p>
             </div>
 
@@ -21,19 +21,26 @@ export const RollingAnimationExample = () => {
                 <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
 
                 {/* SyntaxHighlighter for JSX code display */}
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import { RollingAnimation } from '@/components/EFFECTS/RollingAnimtaion/RollingAnimation'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
 
 <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
-`} />
-
+`
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                />
 
             </div>
         </Wrapper>

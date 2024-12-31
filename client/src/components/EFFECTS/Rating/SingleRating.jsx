@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { set } from 'lodash'
 import React, { useState } from 'react'
 
@@ -6,7 +7,7 @@ export const SingleRating = ({list = [
     [2, '😃'],
     [3, '😄'],
     [4, '😁']
-  ]}) => {
+  ], className, ...props}) => {
 
     const [selected, setSelected] = useState(null)
     
@@ -15,7 +16,7 @@ export const SingleRating = ({list = [
       }
 
     return (
-        <div div className='flex gap-4' >
+        <div className={cn('flex gap-4', className)} {...props}>
             {/* Single Selection Review */}
             {
                 list.map((item, index) => (
