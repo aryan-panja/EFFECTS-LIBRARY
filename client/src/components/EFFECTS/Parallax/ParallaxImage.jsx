@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import React, { useEffect, useRef, useState } from 'react'
 
-export const ParallaxImage = ({ speed = 20, img, className }) => {
+export const ParallaxImage = ({ speed = 20, img, className, ...props }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
@@ -28,6 +28,7 @@ export const ParallaxImage = ({ speed = 20, img, className }) => {
     <div
       ref={containerRef}
       className={cn("relative overflow-hidden rounded-lg shadow-lg h-[300px] w-[400px]", className)}
+      {...props}
       // style={{ width: '400px', height: '300px' }}
     >
       <img

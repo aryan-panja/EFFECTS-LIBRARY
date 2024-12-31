@@ -20,7 +20,7 @@ export const RollingAnimation = ({ items = [
     "AI AGENTS",
     "MULTIMODAL ACCESS",
     "ML MODELS"
-], duration = 1000, className, props }) => {
+], duration = 1000, className, ...props }) => {
 
     const currentIndex = useRollingAnimation(items, duration);
 

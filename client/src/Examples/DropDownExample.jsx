@@ -15,7 +15,7 @@ export const DropDownExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Parallax Image</h1>
                 <p className="my-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the DropDown example. Add the DropDown component to your project and customize it as needed.
                 </p>
             </div>
 
@@ -30,9 +30,9 @@ export const DropDownExample = () => {
                     </DropDownMenu>
                 </DropDown>
 
-                {/* SyntaxHighlighter for JSX code display */}
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import {
     DropDown,
     DropDownItem,
@@ -40,10 +40,14 @@ import {
     DropDownTrigger
 } from '@/components/EFFECTS/DropDown/DropDown'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/DropDown/DropDown.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <DropDown>
     <DropDownTrigger>Click me</DropDownTrigger>
     <DropDownMenu>
@@ -53,7 +57,9 @@ import {
     </DropDownMenu>
 </DropDown>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/DropDown/DropDown.jsx'
+                />
             </div>
         </Wrapper>
     )

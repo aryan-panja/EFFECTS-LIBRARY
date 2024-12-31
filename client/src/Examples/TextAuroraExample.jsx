@@ -9,7 +9,7 @@ export const TextAuroraExample = () => {
       <div className="mx-auto">
         <h1 className="text-xl font-bold mb-4">Text Aurora</h1>
         <p className="mb-8 roboto-regular">
-          Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+          Here is the Text Aurora example.
         </p>
       </div>
 
@@ -21,26 +21,39 @@ export const TextAuroraExample = () => {
 
         {/* SyntaxHighlighter for JSX code display */}
 
-        <CodeSnippet code={
-          `
-import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`} heading='Import in React' />
+        <CodeSnippet
+          code={
+            `
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`
+          }
+          heading='Import in React'
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextAurora.jsx'
+        />
 
-        <CodeSnippet code={
-          `
+        <CodeSnippet
+          code={
+            `
 <TextAurora>
   Hello
-</TextAurora>` } />
+</TextAurora>`
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextAurora.jsx'
+        />
 
         <TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
           Hello
         </TextAurora>
 
-        <CodeSnippet code={
-          `
+        <CodeSnippet
+          code={
+            `
 <TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
   Hello
-</TextAurora>` } />
-        
+</TextAurora>`
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextAurora.jsx'
+        />
+
       </div>
     </Wrapper>
   )

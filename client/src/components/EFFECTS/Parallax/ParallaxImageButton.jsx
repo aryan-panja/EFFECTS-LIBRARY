@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const ParallaxImageButton = ({ speed = 20, className, linkInside, linkOutside, img, children }) => {
+export const ParallaxImageButton = ({ speed = 20, className, linkInside, linkOutside, img, children, ...props }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
     const animationFrame = useRef(null);
@@ -39,6 +39,7 @@ export const ParallaxImageButton = ({ speed = 20, className, linkInside, linkOut
                 <div
                     ref={containerRef}
                     className={cn(`relative overflow-hidden rounded-lg shadow-lg h-20 w-36`, className)}
+                    {...props}
                 >
                     <img
                         src={img || "https://images.unsplash.com/photo-1682685796014-2f342188a635?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"}

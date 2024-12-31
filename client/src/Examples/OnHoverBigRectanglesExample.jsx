@@ -15,7 +15,7 @@ export const OnHoverBigRectanglesExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">On Hover Big Rectangles</h1>
                 <p className="my-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the On HOver Big Rectangles example. Just make your website more interactive with displaying more information on hover in less space.
                 </p>
             </div>
 
@@ -32,17 +32,22 @@ export const OnHoverBigRectanglesExample = () => {
                 </ExpandableInfoCard>
 
                 {/* SyntaxHighlighter for JSX code display */}
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import {
     ExpandableInfoCard,
     ExpandableInfoCardTextAfter,
     ExpandableInfoCardTextBefore
 } from '@/components/EFFECTS/OnHoverBigRectangles/OnHoverBigRectangles'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/OnHoverBigRectangles/OnHoverBigRectangles.jsx'
+                />
 
-                <CodeSnippet code={`
+                <CodeSnippet
+                    code={`
 <ExpandableInfoCard src={test1}>
     <ExpandableInfoCardTextBefore>
         <h1>Aryan Panja</h1>
@@ -53,7 +58,9 @@ import {
     </ExpandableInfoCardTextAfter>
 </ExpandableInfoCard>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/OnHoverBigRectangles/OnHoverBigRectangles.jsx'
+                />
 
             </div>
         </Wrapper>

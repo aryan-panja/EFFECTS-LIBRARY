@@ -2,7 +2,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils';
 import React, { useState } from 'react'
 
-export const DynamicTextArea = ({ targetCharacter = '', targetWord = '', className }) => {
+export const DynamicTextArea = ({ targetCharacter = '', targetWord = '', className, ...props }) => {
     const [text, setText] = useState('')
 
     const totalCharacters = text.length;
@@ -21,7 +21,7 @@ export const DynamicTextArea = ({ targetCharacter = '', targetWord = '', classNa
     const totalTargetWord = targetWord ? (text.match(new RegExp(`\\b${targetWord}\\b`, 'g')) || []).length : 0;
   
     return (
-      <div className={cn('flex flex-col items-center justify-center w-full', className)}>
+      <div className={cn('flex flex-col items-center justify-center w-full', className)} {...props}>
         <Textarea 
           className="w-1/2 text-black" 
           onChange={(e) => setText(e.target.value)} 

@@ -9,7 +9,7 @@ export const WaveTextAnimationExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Wave Text</h1>
                 <p className="mb-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the Wave Text example.
                 </p>
                 <p className='roboto-regular'>We are giving out different options for the user to fill the svg with the color as shown in the example 2</p>
 
@@ -23,8 +23,9 @@ export const WaveTextAnimationExample = () => {
 
                 {/* SyntaxHighlighter for JSX code display */}
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 // Copy these into your tailwind.config.js file
 keyframes: {
         'wave': {
@@ -42,45 +43,61 @@ keyframes: {
     }
 }
                 `
-                } heading='Tailwind.config.js' />
+                    }
+                    heading='Tailwind.config.js'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import { WaveTextAnimation } from '@/components/EFFECTS/TextAnimations/WaveTextAnimation'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <WaveTextAnimation>
     Hello
 </WaveTextAnimation>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
+                />
 
                 <WaveTextAnimation className={'font-bold'} color='#ffff'>
                     Hello
                 </WaveTextAnimation>
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <WaveTextAnimation className={'font-bold'} color='#ffff'>
     Hello
 </WaveTextAnimation>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
+                />
 
                 <WaveTextAnimation className={'font-bold'} color='#ffff' stroke={'#0000'}>
                     aryan
                 </WaveTextAnimation>
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 <WaveTextAnimation className={'font-bold'} color='#ffff' stroke={'#0000'}>
     Hello
 </WaveTextAnimation>
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
+                />
 
             </div>
         </Wrapper>

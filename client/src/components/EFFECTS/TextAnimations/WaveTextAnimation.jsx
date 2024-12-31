@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 
-export const WaveTextAnimation = ({children, className, color = '#03a9f4', stroke = color,...props}) => {
+export const WaveTextAnimation = ({children, className, color = '#03a9f4', stroke = color, ...props}) => {
 
   return (
     <div className={cn(`content relative text-[50px]`, className)} {...props}>

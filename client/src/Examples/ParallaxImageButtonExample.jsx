@@ -10,7 +10,7 @@ export const ParallaxImageButtonExample = () => {
       <div className="mx-auto">
         <h1 className="text-xl font-bold mb-4">Parallax Button</h1>
         <p className="my-8 roboto-regular">
-          Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+          Here is the Parallax Image Button example. You can add this button with you chaoice of image to make your website more interactive.
         </p>
       </div>
 
@@ -19,16 +19,23 @@ export const ParallaxImageButtonExample = () => {
         <ParallaxImageButton linkOutside={'https://www.google.com'} >hello</ParallaxImageButton>
 
         {/* SyntaxHighlighter for JSX code display */}
-        <CodeSnippet code={
-          `
+        <CodeSnippet
+          code={
+            `
 import { ParallaxImageButton } from '@/components/EFFECTS/Parallax/ParallaxImageButton'
 `
-        } heading='Import in React' />
+          }
+          heading='Import in React'
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Parallax/ParallaxImageButton.jsx'
+        />
 
-        <CodeSnippet code={`
+        <CodeSnippet
+          code={`
 <ParallaxImageButton linkOutside={'https://www.google.com'} >hello</ParallaxImageButton>
 `
-        } />
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Parallax/ParallaxImageButton.jsx'
+        />
 
       </div>
     </Wrapper>

@@ -17,13 +17,13 @@ export const RatingsExample = () => {
             <div className="mx-auto">
                 <h1 className="text-xl font-bold mb-4">Ratings</h1>
                 <p className="my-8 roboto-regular">
-                    Here is the Parallax Image example. Switch between different components to see more effects and layouts.
+                    Here is the Rating example. Add this element to your project to get ratings from users.
                 </p>
             </div>
 
             <div className="mx-auto">
                 <h1 className="text-lg font-bold mb-4">Single Selected Rating</h1>
-                
+
             </div>
 
             <div className="flex flex-col items-center justify-center">
@@ -31,14 +31,19 @@ export const RatingsExample = () => {
                 <SingleRating list={list} />
 
                 {/* SyntaxHighlighter for JSX code display */}
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 import { SingleRating } from '@/components/EFFECTS/Rating/SingleRating'
 `
-                } heading='Import in React' />
+                    }
+                    heading='Import in React'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Rating/SingleRating.jsx'
+                />
 
-                <CodeSnippet code={
-                    `
+                <CodeSnippet
+                    code={
+                        `
 const list = [
                 [1, '😀'],
                 [2, '😃'],
@@ -48,7 +53,9 @@ const list = [
 
 <SingleRating list={list} />
 `
-                } />
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Rating/SingleRating.jsx'
+                />
             </div>
         </Wrapper>
     )

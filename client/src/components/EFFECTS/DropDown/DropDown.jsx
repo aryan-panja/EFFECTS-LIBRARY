@@ -1,31 +1,13 @@
-/*
-making a dropdown menu
-1. parent dic containing the dropdown
-2. 1st chifl dive giving the name of the dropdown
-3. 2nd child div containing the dropdown menu
-
-example - 
-<DropDown>
-    <Header>Dropdown</Header>
-    <List>
-        <ListItem>Option 1</ListItem>
-        <ListItem>Option 2</ListItem>
-        <ListItem>Option 3</ListItem>
-    </List>
-</DropDown>
-
-*/
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 
-const DropDown = ({ children, className }) => {
+const DropDown = ({ children, className, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className={cn("relative inline-block", className)}>
+    <div className={cn("relative inline-block", className)} {...props}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, { isOpen, toggleDropdown })
       )}
