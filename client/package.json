@@ -15,6 +15,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
+    "@vercel/analytics": "^1.4.1",
     "babel-plugin-prismjs": "^2.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

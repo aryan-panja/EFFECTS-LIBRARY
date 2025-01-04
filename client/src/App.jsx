@@ -9,6 +9,7 @@ import { LandingPageCSS } from "./pages/css-effects/LandingPageCSS";
 import { PinterestEffect } from "./pages/css-effects/PinterestEffect";
 import { Comments } from "./pages/css-effects/Comments";
 import { SideBar } from "./components/navigation/SideBar";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
             </SideBar>
           } />
         </Routes>
+
+        <Analytics/>
       </div>
     </BrowserRouter>
   );
