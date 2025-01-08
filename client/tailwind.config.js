@@ -57,17 +57,34 @@ export default {
 					'100%': { 'background-position': '200% 0' },
 				},
 				'wave': {
-					'0%': {'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)'},
-					'50%': {'clip-path': 'polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)'},
-					'100%': {'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)'}
+					'0%': { 'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)' },
+					'50%': { 'clip-path': 'polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)' },
+					'100%': { 'clip-path': 'polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)' }
 				},
 				'bouncy-reveal': {
-					'0%': {'clip-path': 'circle(0.0% at 50% 50%)'},
-					'20%': {'clip-path': 'circle(15.0% at 50% 50%)'},
-					'40%': {'clip-path': 'circle(10.0% at 50% 50%)'},
-					'60%': {'clip-path': 'circle(40.0% at 50% 50%)'},
-					'80%': {'clip-path': 'circle(20.0% at 50% 50%)'},
-					'100%': {'clip-path': 'circle(100.0% at 50% 50%)'}
+					'0%': { 'clip-path': 'circle(0.0% at 50% 50%)' },
+					'20%': { 'clip-path': 'circle(15.0% at 50% 50%)' },
+					'40%': { 'clip-path': 'circle(10.0% at 50% 50%)' },
+					'60%': { 'clip-path': 'circle(40.0% at 50% 50%)' },
+					'80%': { 'clip-path': 'circle(20.0% at 50% 50%)' },
+					'100%': { 'clip-path': 'circle(100.0% at 50% 50%)' }
+				},
+				'clip-animation-1': {
+					'0%': { 'clip-path': 'circle(18.0% at 21% 23%)' },
+					'17%': { 'clip-path': 'circle(18.0% at 77% 50%)' },
+					'34%': { 'clip-path': 'circle(18.0% at 27% 74%)' },
+					'51%': { 'clip-path': 'circle(18.0% at 71% 74%)' },
+					'68%': { 'clip-path': 'circle(18.0% at 25% 46%)' },
+					'85%': { 'clip-path': 'circle(18.0% at 76% 23%)' },
+					'100%': { 'clip-path': 'circle(18.0% at 21% 23%)' }
+				},
+				'clip-animation-2': {
+					'0%': { 'clip-path': 'circle(18.0% at 21% 23%)' },
+					'17%': { 'clip-path': 'circle(18.0% at 77% 50%)' },
+					'34%': { 'clip-path': 'circle(18.0% at 27% 74%)' },
+					'51%': { 'clip-path': 'circle(18.0% at 71% 74%)' },
+					'68%': { 'clip-path': 'circle(18.0% at 51% 50%)' },
+					'100%': { 'clip-path': 'circle(70.7% at 50% 50%)' }
 				},
 				'accordion-down': {
 					from: {
@@ -92,6 +109,8 @@ export default {
 				'shine': 'shine 5s linear infinite',
 				'wave': 'wave 4s ease-in-out infinite',
 				'bouncy-reveal': 'bouncy-reveal 4s ease-in-out infinite',
+				'clip-animation-1': 'clip-animation-1 infinite 10s linear',
+				'clip-animation-2': 'clip-animation-2 infinite 10s linear'
 			}
 		}
 	},

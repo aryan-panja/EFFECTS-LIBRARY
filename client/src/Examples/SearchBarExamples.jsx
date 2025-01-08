@@ -39,23 +39,52 @@ export const SearchBarExamples = () => {
 
       <div className="flex flex-col items-center justify-center">
 
-        <p className="my-8 text-zinc-300 roboto-regular">
-          Example - Here is the search bar where you can send the props of search data and recent history as we can see in Youtube or Google searchbar.
+        <p className="my-8 roboto-regular">
+          Example - Here is the search bar where you can define the shortcut that you have given to focus on the search bar as well as the placeholder option.
         </p>
 
-        <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
+        <SearchBar
+          className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
+          id='search-bar'
+          searchData={data}
+          searchRecents={recents}
+          placeholder='Search here......'
+          shortcutKey={'⌘+K'}  // Custom shortcut key
+          iconColor='#fff'
+        />
 
         {/* SyntaxHighlighter for JSX code display */}
         <CodeSnippet
           code={
             `
-import { SearchBar } from '@/components/EFFECTS/SearchBar/SearchBar'
-
+import { SearchBar } from '@/components/EFFECTS/SearchBar/SearchBar'  
 `
           }
           heading='Import in React'
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
         />
+
+        <CodeSnippet
+          code={`
+<SearchBar
+  className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
+  id='search-bar'
+  searchData={data}
+  searchRecents={recents}
+  placeholder='Search here......'
+  shortcutKey={'⌘+K'}  // Custom shortcut key
+  iconColor='#fff'
+/>
+`
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
+        />
+        
+        <p className="my-8 text-zinc-300 roboto-regular">
+          Example - Here is the search bar where you can send the props of search data and recent history as we can see in Youtube or Google searchbar.
+        </p>
+
+        <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
 
         <CodeSnippet
           code={`
@@ -92,35 +121,6 @@ const recents = [
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
         />
 
-        <p className="my-8 roboto-regular">
-          Example - Here is the search bar where you can define the shortcut that you have given to focus on the search bar as well as the placeholder option.
-        </p>
-
-        <SearchBar
-          className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
-          id='search-bar'
-          searchData={data}
-          searchRecents={recents}
-          placeholder='Search here......'
-          shortcutKey={'⌘+K'}  // Custom shortcut key
-          iconColor='#fff'
-        />
-
-        <CodeSnippet
-          code={`
-<SearchBar
-  className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
-  id='search-bar'
-  searchData={data}
-  searchRecents={recents}
-  placeholder='Search here......'
-  shortcutKey={'⌘+K'}  // Custom shortcut key
-  iconColor='#fff'
-/>
-`
-          }
-          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
-        />
 
       </div>
     </Wrapper>

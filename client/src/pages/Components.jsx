@@ -14,6 +14,7 @@ import { BouncyRevealExample } from "@/Examples/BouncyRevealExample";
 import { RatingsExample } from "@/Examples/RatingsExample";
 import { DropDownExample } from "@/Examples/DropDownExample";
 import { RollingAnimationExample } from "@/Examples/RollingAnimationExample";
+import { RevealAnimationExample } from "@/Examples/RevealAnimationExample";
 
 export default function Component() {
 
@@ -29,6 +30,7 @@ export default function Component() {
     'rating': <RatingsExample />,
     'dropdown': <DropDownExample />,
     'rolling-animation': <RollingAnimationExample />,
+    'reveal-animation': <RevealAnimationExample />,
     // 'calendar': <CalendarExample />,
     'text-shine': <TextShineExample />,
     'text-aurora': <TextAuroraExample />,
