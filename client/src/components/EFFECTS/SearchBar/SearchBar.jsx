@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export const SearchBar = ({ className, searchRecents, searchData, iconColor='#000', onSelect, ...props }) => {
+export const SearchBar = ({ className, searchRecents, searchData, placeholder = "Type to search...", shortcutKey, iconColor = '#000', onSelect, ...props }) => {
     const [searchWord, setSearchWord] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef(null);
@@ -44,12 +44,29 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
         };
     }, []);
 
+    // On clicking the escape key close the dropdown
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+                setIsFocused(false);
+                setSearchWord('');
+                if (inputRef.current) {
+                    inputRef.current.blur();
+                }
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+        };
+    }, []);
+
     const handleClick = (i, array) => {
-        if(array.length <= 0) return;
+        if (array.length <= 0) return;
         setSearchWord(`${array[i].name}`);
         setIsFocused(false); // Close the dropdown after selection
 
-        if(onSelect) {
+        if (onSelect) {
             onSelect(array[i].name);
         }
     };
@@ -61,13 +78,30 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
                     type="text"
                     className={cn('border-2 w-full rounded-xl p-2 pr-10 text-black pl-5', className)}
                     value={searchWord}
-                    onChange={(e) => {setIsFocused(true); setSearchWord(e.target.value)}}
+                    onChange={(e) => { setIsFocused(true); setSearchWord(e.target.value) }}
                     onFocus={() => setIsFocused(true)}
-                    onKeyDown={(e) => {if(e.key === 'Enter' ) handleClick(0, showData)}}
-                    placeholder="Type to search..."
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') handleClick(0, showData);
+                        if (e.key === 'Escape') {
+                            setIsFocused(false);
+                            setSearchWord('');
+                            e.currentTarget.blur();
+                        }
+                    }}
+                    placeholder={placeholder}
                     {...props}
                 />
-                <Search className={`absolute ${isFocused ? 'top-[9px] opacity-100' : 'top-[100%] opacity-0'} right-2 pointer-events-none duration-500`} style={{color: iconColor}}/>
+
+                {
+                    shortcutKey ? (
+                        <div>
+                            <kbd className={`absolute bg-[#3e3e43] rounded-md p-[3px] mr-2 ${isFocused ? 'top-0 opacity-0' : 'top-[7px] opacity-100'} right-2 pointer-events-none duration-500`}>{shortcutKey}</kbd>
+
+                            <Search className={`absolute ${isFocused ? 'top-[9px] opacity-100' : 'top-[100%] opacity-0'} right-2 pointer-events-none duration-500`} style={{ color: iconColor }} />
+                        </div>
+                    )
+                        : <Search className={`absolute ${isFocused ? 'top-[9px] opacity-100' : 'top-[100%] opacity-0'} right-2 pointer-events-none duration-500`} style={{ color: iconColor }} />
+                }
 
                 {/* The suggestion box */}
                 {isFocused && (
@@ -80,7 +114,7 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
                                     </li>
                                 ))}
                             </ul>
-                        ) : searchWord.length<=0 ? (
+                        ) : searchWord.length <= 0 ? (
                             <ul className="flex flex-col gap-y-2 max-h-60 overflow-y-auto p-2">
                                 {recents.map((item, index) => (
                                     <li key={index} className="cursor-pointer hover:bg-gray-100 hover:rounded-lg p-2" onClick={() => handleClick(index, recents)}>
@@ -88,7 +122,7 @@ export const SearchBar = ({ className, searchRecents, searchData, iconColor='#00
                                     </li>
                                 ))}
                             </ul>
-                        )  : (
+                        ) : (
                             <div className='p-2 text-center'>Nothing found</div>
                         )}
                     </div>

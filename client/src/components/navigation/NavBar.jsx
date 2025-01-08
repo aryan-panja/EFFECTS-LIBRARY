@@ -83,6 +83,8 @@ export const NavBar = () => {
                         id='search-bar'
                         searchRecents={recents}  // Pass recents as a prop
                         searchData={searchData}  // Pass searchData as a prop
+                        placeholder='Search here......'
+                        shortcutKey={'⌘+K'}  // Custom shortcut key
                         onSelect={handleSearchSelect}  // Custom handler for routing
                         iconColor='#fff'  // Custom icon color
                     />
