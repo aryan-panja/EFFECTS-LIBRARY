@@ -1,13 +1,10 @@
-import { RollingAnimation } from '@/components/EFFECTS/RollingAnimtaion/RollingAnimation';
+import { RevealAnimation } from '@/components/EFFECTS/Animations/RevealAnimation/RevealAnimation'
 import React from 'react'
 
 export const Test = () => {
-
-  const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
-
   return (
     <div>
-      <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
+      <RevealAnimation />
     </div>
   )
 }

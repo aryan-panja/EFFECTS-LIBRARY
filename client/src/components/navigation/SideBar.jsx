@@ -24,9 +24,15 @@ export const SideBar = ({ children }) => {
                 'View More',
                 'Rating',
                 'Dropdown',
-                'Rolling Animation',
                 // 'Calendar'
             ]
+        },
+        {
+            'heading': 'Animations',
+            'components': [
+                'Rolling Animation',
+                'Reveal Animation',
+            ],
         },
         {
             'heading': 'Text Animations',
@@ -38,10 +44,6 @@ export const SideBar = ({ children }) => {
                 'Bouncy Reveal'
             ]
         },
-        {
-            'heading': 'Border Animations',
-            'components': [],
-        }
     ];
 
     return (
@@ -51,7 +53,7 @@ export const SideBar = ({ children }) => {
                     <ul>
                         {componentNames.map((section, index) => (
                             <li key={index} className="mb-4">
-                                <h3 className="text-lg font-semibold">{section.heading}</h3>
+                                <h3 className="text-xl font-semibold">{section.heading}</h3>
 
                                 {section.components.map((name, index) => (
                                     <Link to={`/components/${name.replace(/\s+/g, "-").toLowerCase()}`} className="w-full">

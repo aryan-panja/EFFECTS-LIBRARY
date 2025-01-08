@@ -1,5 +1,5 @@
 import { CodeSnippet } from '@/components/CodeSnippet'
-import { RollingAnimation } from '@/components/EFFECTS/RollingAnimtaion/RollingAnimation'
+import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation';
 import { Wrapper } from '@/components/Wrapper'
 import React from 'react'
 
@@ -24,7 +24,7 @@ export const RollingAnimationExample = () => {
                 <CodeSnippet
                     code={
                         `
-import { RollingAnimation } from '@/components/EFFECTS/RollingAnimtaion/RollingAnimation'
+import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation';
 `
                     }
                     heading='Import in React'
