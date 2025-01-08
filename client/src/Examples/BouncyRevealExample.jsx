@@ -45,7 +45,7 @@ keyframes: {
 		'bouncy-reveal': 'bouncy-reveal 4s ease-in-out infinite'
     }
 }
-                `
+`
                     }
                     heading='Tailwind.config.js'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'

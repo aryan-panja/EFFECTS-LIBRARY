@@ -28,7 +28,7 @@ import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtai
 `
                     }
                     heading='Import in React'
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation.jsx'
                 />
 
                 <CodeSnippet
@@ -39,7 +39,7 @@ const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
 <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
 `
                     }
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation.jsx'
                 />
 
             </div>

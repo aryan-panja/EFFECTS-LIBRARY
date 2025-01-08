@@ -27,7 +27,6 @@ export const DynamicTextAreaExample = () => {
                     code={
                         `
 import { DynamicTextArea } from '@/components/EFFECTS/DynamicTextArea/DynamicTextArea'
-
 `
                     }
                     heading='Import in React'
@@ -35,7 +34,8 @@ import { DynamicTextArea } from '@/components/EFFECTS/DynamicTextArea/DynamicTex
                 />
 
                 <CodeSnippet
-                    code={`
+                    code={
+                        `
 <DynamicTextArea />
 `
                     }

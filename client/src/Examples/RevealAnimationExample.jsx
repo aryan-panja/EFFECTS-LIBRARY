@@ -32,18 +32,56 @@ import { RevealAnimation } from '@/components/EFFECTS/Animations/RevealAnimation
 `
                     }
                     heading='Import in React'
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RevealAnimation/RevealAnimation.jsx'
                 />
 
                 <CodeSnippet
                     code={
                         `
-    const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
-    
-    <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
-    `
+// Copy these into your tailwind.config.js file
+keyframes: {
+        'clip-animation-1': {
+            '0%': { 'clip-path': 'circle(18.0% at 21% 23%)' },
+            '17%': { 'clip-path': 'circle(18.0% at 77% 50%)' },
+            '34%': { 'clip-path': 'circle(18.0% at 27% 74%)' },
+            '51%': { 'clip-path': 'circle(18.0% at 71% 74%)' },
+            '68%': { 'clip-path': 'circle(18.0% at 25% 46%)' },
+            '85%': { 'clip-path': 'circle(18.0% at 76% 23%)' },
+            '100%': { 'clip-path': 'circle(18.0% at 21% 23%)' }
+        },
+        'clip-animation-2': {
+            '0%': { 'clip-path': 'circle(18.0% at 21% 23%)' },
+            '17%': { 'clip-path': 'circle(18.0% at 77% 50%)' },
+            '34%': { 'clip-path': 'circle(18.0% at 27% 74%)' },
+            '51%': { 'clip-path': 'circle(18.0% at 71% 74%)' },
+            '68%': { 'clip-path': 'circle(18.0% at 51% 50%)' },
+            '100%': { 'clip-path': 'circle(70.7% at 50% 50%)' }
+        },
+        
+        //Rest of the code
+}
+animation: {
+    //Rest of the code
+
+    'clip-animation-1': 'clip-animation-1 infinite 10s linear',
+    'clip-animation-2': 'clip-animation-2 infinite 10s linear'
+}
+`
                     }
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                    heading='Tailwind.config.js'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RevealAnimation/RevealAnimation.jsx'
+                />
+
+                <CodeSnippet
+                    code={
+                        `
+<RevealAnimation
+    src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
+    animation='animate-clip-animation-1'
+/>
+`
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RevealAnimation/RevealAnimation.jsx'
                 />
 
                 <p className="my-8 roboto-regular">
@@ -59,22 +97,13 @@ import { RevealAnimation } from '@/components/EFFECTS/Animations/RevealAnimation
                 <CodeSnippet
                     code={
                         `
-    import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation';
-    `
+<RevealAnimation
+    src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
+    animation='animate-clip-animation-2'
+/>
+`
                     }
-                    heading='Import in React'
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
-                />
-
-                <CodeSnippet
-                    code={
-                        `
-    const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
-    
-    <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
-    `
-                    }
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/RollingAnimtaion/RollingAnimation.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RevealAnimation/RevealAnimation.jsx'
                 />
 
             </div>
