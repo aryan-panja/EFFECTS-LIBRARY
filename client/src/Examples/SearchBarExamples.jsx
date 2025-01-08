@@ -92,6 +92,36 @@ const recents = [
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
         />
 
+        <p className="my-8 roboto-regular">
+          Example - Here is the search bar where you can define the shortcut that you have given to focus on the search bar as well as the placeholder option.
+        </p>
+
+        <SearchBar
+          className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
+          id='search-bar'
+          searchData={data}
+          searchRecents={recents}
+          placeholder='Search here......'
+          shortcutKey={'⌘+K'}  // Custom shortcut key
+          iconColor='#fff'
+        />
+
+        <CodeSnippet
+          code={`
+<SearchBar
+  className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
+  id='search-bar'
+  searchData={data}
+  searchRecents={recents}
+  placeholder='Search here......'
+  shortcutKey={'⌘+K'}  // Custom shortcut key
+  iconColor='#fff'
+/>
+`
+          }
+          githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
+        />
+
       </div>
     </Wrapper>
 

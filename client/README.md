@@ -55,4 +55,82 @@ That's a great project idea! Here are some unique component ideas for your Tailw
 
 Each of these components could be built with modularity and configurability in mind, allowing users to customize them to fit their designs effortlessly.
 
-update the readme
+PROPOSED - 
+1. https://play.tailwindcss.com/Sk4rbLcCXv
+<div>
+  <img class="back" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="" />
+
+  <img class="back2" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="" />
+</div>
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.back{
+  clip-path: circle(18.0% at 21% 23%);
+  animation: clip-animation infinite 10s;
+}
+
+.back2{
+  clip-path: circle(18.0% at 21% 23%);
+  animation: clip-animation-2 infinite 10s;
+}
+
+@keyframes clip-animation{
+  0%{
+    clip-path: circle(18.0% at 21% 23%);
+  }
+
+  17%{
+    clip-path: circle(18.0% at 77% 50%);
+  }
+
+  34%{
+    clip-path: circle(18.0% at 27% 74%);
+  }
+
+  51%{
+    clip-path: circle(18.0% at 71% 74%);
+  }
+
+  68%{
+    clip-path: circle(18.0% at 25% 46%);
+  }
+
+  85%{
+    clip-path: circle(18.0% at 76% 23%);
+  }
+
+  100%{
+    clip-path: circle(18.0% at 21% 23%);
+  }
+}
+
+@keyframes clip-animation-2{
+  0%{
+    clip-path: circle(18.0% at 21% 23%);
+  }
+
+  17%{
+    clip-path: circle(18.0% at 77% 50%);
+  }
+
+  34%{
+    clip-path: circle(18.0% at 27% 74%);
+  }
+
+  51%{
+    clip-path: circle(18.0% at 71% 74%);
+  }
+/*  */
+  68%{
+    clip-path: circle(18.0% at 51% 50%);
+  }
+
+  100%{
+    clip-path: circle(70.7% at 50% 50%);
+  }
+}
