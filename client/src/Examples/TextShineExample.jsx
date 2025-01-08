@@ -39,7 +39,7 @@ keyframes: {
         'shine': 'shine 5s linear infinite',
     }
 }
-                `
+`
                     }
                     heading='Tailwind.config.js'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
@@ -73,7 +73,8 @@ import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
                 <CodeSnippet
                     code={
                         `
-import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`
+import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
+`
                     }
                     heading='Import in React'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'

@@ -39,7 +39,7 @@ export const TextFormExample = () => {
 // Also to use this animation you have to choose the stroke till the point it fills their border entirely to give better look.
 
 --user-stroke-dasharray: 830;
-                    `
+`
           }
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
         />
