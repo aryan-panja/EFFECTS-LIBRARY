@@ -10,7 +10,7 @@ export const RollingAnimationExample = () => {
     return (
         <Wrapper>
             <div className="mx-auto">
-                <h1 className="text-xl font-bold mb-4">View More</h1>
+                <h1 className="text-xl font-bold mb-4">Rolling Animation</h1>
                 <p className="my-8 roboto-regular">
                     Here is the Rolling Animation example.
                 </p>
