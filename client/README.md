@@ -56,4 +56,4 @@ That's a great project idea! Here are some unique component ideas for your Tailw
 Each of these components could be built with modularity and configurability in mind, allowing users to customize them to fit their designs effortlessly.
 
 PROPOSED - 
-1. 
+1. CodeSnippet
