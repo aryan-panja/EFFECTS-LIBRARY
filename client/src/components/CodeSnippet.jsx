@@ -7,7 +7,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { Clipboard, ClipboardCheck } from 'lucide-react'
 
-export const CodeSnippet = ({ code = 'sdv', heading = 'Code Snippet', githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY' }) => {
+export const CodeSnippet = ({ code = 'sdv', heading = 'Code Snippet', githubLink = 'https://github.com/aryan-panja/EFFECTS-LIBRARY' }) => {
 
     const [processedCode, setProcessedCode] = useState('');
     const [copying, setCopying] = useState(false);
