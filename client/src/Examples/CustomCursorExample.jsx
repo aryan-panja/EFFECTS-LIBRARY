@@ -135,7 +135,7 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
 `
                     }
                     heading='Import in React'
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/DropDown/DropDown.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/CustomCursor/CustomCursor.jsx'
                 />
 
                 <CodeSnippet
@@ -179,7 +179,7 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
 </div>
 `
                     }
-                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/DropDown/DropDown.jsx'
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/CustomCursor/CustomCursor.jsx'
                 />
             </div>
         </Wrapper>
