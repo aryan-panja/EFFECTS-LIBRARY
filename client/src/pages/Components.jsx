@@ -15,6 +15,7 @@ import { RatingsExample } from "@/Examples/RatingsExample";
 import { DropDownExample } from "@/Examples/DropDownExample";
 import { RollingAnimationExample } from "@/Examples/RollingAnimationExample";
 import { RevealAnimationExample } from "@/Examples/RevealAnimationExample";
+import { CustomCursorExample } from "@/Examples/CustomCursorExample";
 
 export default function Component() {
 
@@ -29,6 +30,7 @@ export default function Component() {
     'view-more': <ViewMoreExample />,
     'rating': <RatingsExample />,
     'dropdown': <DropDownExample />,
+    'custom-cursor': <CustomCursorExample />,
     'rolling-animation': <RollingAnimationExample />,
     'reveal-animation': <RevealAnimationExample />,
     // 'calendar': <CalendarExample />,

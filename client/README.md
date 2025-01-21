@@ -57,3 +57,8 @@ Each of these components could be built with modularity and configurability in m
 
 PROPOSED - 
 1. CodeSnippet
+2. https://youtube.com/shorts/z8LvMuPyLoA?si=VDBzTBP08ArGy_NW - add github link, add the info about the usage
+(
+    image - image, icon, tooltip
+    text - image, icon, tooltip
+)

@@ -13,7 +13,7 @@ export const DropDownExample = () => {
     return (
         <Wrapper>
             <div className="mx-auto">
-                <h1 className="text-xl font-bold mb-4">Parallax Image</h1>
+                <h1 className="text-xl font-bold mb-4">DropDown</h1>
                 <p className="my-8 roboto-regular">
                     Here is the DropDown example. Add the DropDown component to your project and customize it as needed.
                 </p>
