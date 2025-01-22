@@ -3,6 +3,8 @@ import { CodeSnippet } from '@/components/CodeSnippet'
 import { Wrapper } from '@/components/Wrapper'
 import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
 import { Moon, Star, Sun, Waves } from 'lucide-react'
+import { set } from 'lodash'
+import { color } from 'framer-motion'
 
 export const CustomCursorExample = () => {
 
@@ -77,6 +79,14 @@ export const CustomCursorExample = () => {
         ],
     ]
 
+    const item = {
+        text: "Forest",
+        image: "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        set: 'image',
+        color: "rgb(1, 81, 23)",
+        className: 'rounded-xl h-48 w-48',
+    }
+
     const [activeItem, setActiveItem] = React.useState(null)
 
 
@@ -141,6 +151,77 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
                 <CodeSnippet
                     code={
                         `
+const gridItems = [
+        [
+            {
+                text: "MOON",
+                icon: <Moon className="w-full h-full" />,
+                image: "https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                set: 'image',
+                color: "rgb(226, 232, 240)",
+                glowColor: "rgba(226, 232, 240, 0.35)",
+            },
+            {
+                text: "STAR",
+                icon: <Star className="w-full h-full" />,
+                set: 'icon',
+                color: "rgb(255, 200, 50)",
+                glowColor: "rgba(255, 200, 50, 0.35)",
+            },
+        ],
+        [
+            {
+                text: "SUN",
+                image: "https://images.pexels.com/photos/87611/sun-fireball-solar-flare-sunlight-87611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                icon: <Sun className="w-full h-full" color='white' />,
+                set: 'icon',
+                color: "rgb(255, 150, 50)",
+                glowColor: "rgba(255, 150, 50, 0.35)",
+            },
+            {
+                text: "RIVER",
+                icon: <Waves className="w-full h-full" />,
+                set: 'icon',
+                color: "rgb(100, 200, 255)",
+                glowColor: "rgba(100, 200, 255, 0.35)",
+            },
+        ],
+        [
+            {
+                text: "NATURE",
+                image: "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                set: 'text',
+                color: "rgb(100, 200, 255)",
+                glowColor: "rgba(100, 200, 255, 0.35)",
+                className: 'text-2xl'
+            },
+            {
+                text: "TURTLE",
+                image: "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                set: 'text',
+                color: "rgb(100, 200, 255)",
+                glowColor: "rgba(100, 200, 255, 0.35)",
+                className: 'text-lg bg-[#029aa3] font-semibold'
+            },
+        ],
+        [
+            {
+                text: "BEACH",
+                icon: <Waves className="w-full h-full" />,
+                set: 'text',
+                color: "rgb(100, 200, 255)",
+                glowColor: "rgba(100, 200, 255, 0.35)",
+            },
+            {
+                text: "FOREST",
+                icon: <Waves className="w-full h-full" />,
+                set: 'text',
+                color: "rgb(100, 200, 255)",
+                glowColor: "rgba(100, 200, 255, 0.35)",
+            },
+        ],
+    ]
+
 <CustomCursor
     className={activeItem?.className || ''}
     icon={activeItem?.icon}
@@ -185,7 +266,7 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
                 <div className="mx-auto">
                     <h1 className="text-xl font-bold mb-4">Description of the Usage of the Component</h1>
                     <p className="my-8 roboto-regular">
-                        <ul className="list-disc list-inside flex flex-col space-y-2">
+                        <ul className="list-disc list-inside flex flex-col space-y-3">
                             <li>Add the Custom Cursor Component where you want to apply the custom cursor.</li>
                             <li>
                                 You have the option to apply Custom Cursors in various places such as:
@@ -228,9 +309,87 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
                                     <li><code className='bg-[#1d1d1d] px-2 mr-2'>className</code> : Applies a custom className to the cursor, tooltip, or icon.</li>
                                 </ul>
                             </li>
+                            <li>
+                                To show the cursor on hover, set <code className='bg-[#1d1d1d] px-2 mr-2'>cursor-pointer or any other as you wish to apply</code> in the <code className='bg-[#1d1d1d] px-2 mr-2'>className</code> property. where you have just added the
+                                <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>onMouseEnter={`{() => setActiveItem(item)}`}</code></li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>onMouseLeave={`{() => setActiveItem(null)}`}</code></li>
+                                </ul>
+                            </li>
                         </ul>
                     </p>
                 </div>
+
+                <CustomCursor
+                    className={activeItem?.className || ''}
+                    icon={activeItem?.icon}
+                    image={activeItem?.image}
+                    text={activeItem?.text}
+                    onHoverMouseEnable={activeItem?.set}
+                    color={activeItem?.color}
+                    glowColor={activeItem?.glowColor}
+                    size={48}
+                    glowSize={64}
+                />
+                <div
+                    className="group relative cursor-default"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
+                    onMouseEnter={() => setActiveItem(item)}
+                    onMouseLeave={() => setActiveItem(null)}
+                >
+                    <h1
+                        className="text-[8vw] font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
+                        style={{
+                            WebkitTextStroke: `2px ${item.color}`,
+                        }}
+                    >
+                        {
+                            item.text
+                        }
+                    </h1>
+                </div>
+
+                <CodeSnippet
+                    code={
+                        `
+const item = {
+        text: "Forest",
+        image: "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        set: 'image',
+        color: "rgb(1, 81, 23)",
+        className: 'rounded-xl h-36 w-36',
+    }
+
+<CustomCursor
+    className={activeItem?.className || ''}
+    icon={activeItem?.icon}
+    image={activeItem?.image}
+    text={activeItem?.text}
+    onHoverMouseEnable={activeItem?.set}
+    color={activeItem?.color}
+    glowColor={activeItem?.glowColor}
+    size={48}
+    glowSize={64}
+/>
+<div
+    className="group relative cursor-none"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
+    onMouseEnter={() => setActiveItem(item)}
+    onMouseLeave={() => setActiveItem(null)}
+>
+    <h1
+        className="text-[8vw] font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
+        style={{
+            WebkitTextStroke: '2px $item.color',
+        }}
+    >
+        {
+            item.text
+        }
+    </h1>
+</div>
+`
+                    }
+                    githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/CustomCursor/CustomCursor.jsx'
+                />
 
             </div >
         </Wrapper >
