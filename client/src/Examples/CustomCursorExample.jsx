@@ -181,7 +181,58 @@ import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
                     }
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/CustomCursor/CustomCursor.jsx'
                 />
-            </div>
-        </Wrapper>
+
+                <div className="mx-auto">
+                    <h1 className="text-xl font-bold mb-4">Description of the Usage of the Component</h1>
+                    <p className="my-8 roboto-regular">
+                        <ul className="list-disc list-inside flex flex-col space-y-2">
+                            <li>Add the Custom Cursor Component where you want to apply the custom cursor.</li>
+                            <li>
+                                You have the option to apply Custom Cursors in various places such as:
+                                <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                    <li>
+                                        Images:
+                                        <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                            <li>Image</li>
+                                            <li>Icon</li>
+                                            <li>Tooltip</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Text:
+                                        <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                            <li>Image</li>
+                                            <li>Icon</li>
+                                            <li>Tooltip</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Initialize the <code className='bg-[#1d1d1d] px-2 mr-2'>React.useState</code> to save the cursor to be shown in that area.</li>
+                            <li>
+                                On the target area, initialize the following functions:
+                                <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>onMouseEnter={`{() => setActiveItem(item)}`}</code></li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>onMouseLeave={`{() => setActiveItem(null)}`}</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                In the items list, define objects with the following properties:
+                                <ul className="list-disc list-inside ml-4 mt-2 felx flex-col space-y-3">
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>text</code> : Displays the tooltip text.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>icon</code> : Displays the icon.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>image</code> : Displays the image.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>set</code> : Specify either <code className='bg-[#1d1d1d] px-2 mr-2'>'icon'</code>, <code className='bg-[#1d1d1d] px-2 mr-2'>'image'</code>, or <code className='bg-[#1d1d1d]'>'text'</code> to determine the item to display.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>color</code> : Specifies the color of the cursor.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>glowColor</code> : Specifies the color of the glow.</li>
+                                    <li><code className='bg-[#1d1d1d] px-2 mr-2'>className</code> : Applies a custom className to the cursor, tooltip, or icon.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div >
+        </Wrapper >
     )
 }
