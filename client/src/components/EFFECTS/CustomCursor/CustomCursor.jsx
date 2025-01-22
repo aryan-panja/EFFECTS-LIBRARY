@@ -53,6 +53,7 @@ export function CustomCursor({
                     left: `${position.x}px`,
                     transform: `translate(${offSetX}px, ${offSetY}px)`, // Offset the text slightly from the cursor
                 }}
+                {...props}
             >
                 <span
                     className={cn("bg-white text-black px-2 py-1 rounded shadow inline-block", className)}
