@@ -7,7 +7,7 @@ export function CustomCursor({
     icon,
     image,
     text,
-    onHoverMouseEnable,         
+    onHoverMouseEnable,
     // if you want to enable icon on hover then set this to 'icon' or 
     // if you want to enable image on hover then set this to 'image'
     // if you want to enable text on hover then set this to 'text'
@@ -61,13 +61,33 @@ export function CustomCursor({
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         whiteSpace: "nowrap",
-                      }}
+                    }}
                 >
                     {text}
                 </span>
             </div>
         )
     }
+
+    if (onHoverMouseEnable === 'image') {
+        return (
+            <div
+                className="fixed z-50"
+                style={{
+                    top: `${position.y}px`,
+                    left: `${position.x}px`,
+                    transform: `translate(${offSetX}px, ${offSetY}px)`, // Offset the image slightly from the cursor
+                }}
+                {...props}
+            >
+                <img
+                    src={image}
+                    className={cn("rounded shadow inline-block object-cover h-24 w-24", className)} // Added 'rounded' for rounded corners
+                />
+            </div>
+        );
+    }
+
 
     return (
         <div
@@ -85,13 +105,7 @@ export function CustomCursor({
                     color: color,
                 }}
             >
-                {
-                    onHoverMouseEnable === 'image' ? (
-                        <img src={image || "/placeholder.svg"} alt="" width={size} height={size} className="object-cover" />
-                    ) : onHoverMouseEnable === 'icon' ? (
-                        icon
-                    ) : null
-                }
+                {icon}
             </div>
             <div
                 className="absolute rounded-full transition-transform duration-100"
