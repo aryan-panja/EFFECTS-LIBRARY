@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { WaveTextAnimation } from '@/components/EFFECTS/TextAnimations/WaveTextAnimation'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview'
 
 export const WaveTextAnimationExample = () => {
     return (
@@ -17,9 +18,11 @@ export const WaveTextAnimationExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <WaveTextAnimation>
-                    Hello
-                </WaveTextAnimation>
+                <Preview className={'min-h-[80vh]'}>
+                    <WaveTextAnimation>
+                        Hello
+                    </WaveTextAnimation>
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
 
@@ -69,9 +72,11 @@ import { WaveTextAnimation } from '@/components/EFFECTS/TextAnimations/WaveTextA
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
                 />
 
-                <WaveTextAnimation className={'font-bold'} color='#ffff'>
-                    Hello
-                </WaveTextAnimation>
+                <Preview className={'min-h-[80vh]'}>
+                    <WaveTextAnimation className={'font-bold'} color='#ffff'>
+                        Hello
+                    </WaveTextAnimation>
+                </Preview>
 
                 <CodeSnippet
                     code={
@@ -84,9 +89,11 @@ import { WaveTextAnimation } from '@/components/EFFECTS/TextAnimations/WaveTextA
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/WaveTextAnimation.jsx'
                 />
 
-                <WaveTextAnimation className={'font-bold'} color='#ffff' stroke={'#0000'}>
-                    aryan
-                </WaveTextAnimation>
+                <Preview className={'min-h-[80vh]'}>
+                    <WaveTextAnimation className={'font-bold'} color='#ffff' stroke={'#0000'}>
+                        aryan
+                    </WaveTextAnimation>
+                </Preview>
 
                 <CodeSnippet
                     code={

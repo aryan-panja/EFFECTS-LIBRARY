@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
+import { Preview } from '@/components/Preview'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
 
 export const TextShineExample = () => {
     return (
@@ -15,9 +16,11 @@ export const TextShineExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <TextShine>
-                    Welcome to our Open Source Component Library
-                </TextShine>
+                <Preview>
+                    <TextShine>
+                        Welcome to our Open Source Component Library
+                    </TextShine>
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
 
@@ -66,9 +69,11 @@ import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextShine.jsx'
                 />
 
-                <TextShine className='mt-12 text-sm font-extrabold' style={{ animationDuration: '3s' }}>
-                    Get Early Access
-                </TextShine>
+                <Preview>
+                    <TextShine className='mt-12 text-lg font-extrabold' style={{ animationDuration: '3s' }}>
+                        Get Early Access
+                    </TextShine>
+                </Preview>
 
                 <CodeSnippet
                     code={
@@ -83,7 +88,7 @@ import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'
                 <CodeSnippet
                     code={
                         `
-<TextShine className='mt-12 text-sm font-extrabold' style={{animationDuration: '3s'}}>
+<TextShine className='mt-12 text-lg font-extrabold' style={{animationDuration: '3s'}}>
     Get Early Access
 </TextShine>
 `

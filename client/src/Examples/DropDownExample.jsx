@@ -7,6 +7,7 @@ import {
     DropDownTrigger
 } from '@/components/EFFECTS/DropDown/DropDown'
 import { CodeSnippet } from '@/components/CodeSnippet'
+import { Preview } from '@/components/Preview'
 
 
 export const DropDownExample = () => {
@@ -21,14 +22,16 @@ export const DropDownExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <DropDown>
-                    <DropDownTrigger>Click me</DropDownTrigger>
-                    <DropDownMenu>
-                        <DropDownItem>Item 1</DropDownItem>
-                        <DropDownItem>Item 2</DropDownItem>
-                        <DropDownItem>Item 3</DropDownItem>
-                    </DropDownMenu>
-                </DropDown>
+                <Preview>
+                    <DropDown>
+                        <DropDownTrigger>Click me</DropDownTrigger>
+                        <DropDownMenu>
+                            <DropDownItem>Item 1</DropDownItem>
+                            <DropDownItem>Item 2</DropDownItem>
+                            <DropDownItem>Item 3</DropDownItem>
+                        </DropDownMenu>
+                    </DropDown>
+                </Preview>
 
                 <CodeSnippet
                     code={

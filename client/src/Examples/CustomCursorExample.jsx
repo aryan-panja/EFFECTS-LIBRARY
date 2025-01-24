@@ -3,8 +3,7 @@ import { CodeSnippet } from '@/components/CodeSnippet'
 import { Wrapper } from '@/components/Wrapper'
 import { CustomCursor } from '@/components/EFFECTS/CustomCursor/CustomCursor'
 import { Moon, Star, Sun, Waves } from 'lucide-react'
-import { set } from 'lodash'
-import { color } from 'framer-motion'
+import { Preview } from '@/components/Preview'
 
 export const CustomCursorExample = () => {
 
@@ -101,42 +100,44 @@ export const CustomCursorExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <CustomCursor
-                    className={activeItem?.className || ''}
-                    icon={activeItem?.icon}
-                    image={activeItem?.image}
-                    text={activeItem?.text}
-                    onHoverMouseEnable={activeItem?.set}
-                    color={activeItem?.color}
-                    glowColor={activeItem?.glowColor}
-                    size={48}
-                    glowSize={64}
-                />
-                <div className="grid gap-8">
-                    {gridItems.map((row, rowIndex) => (
-                        <div key={rowIndex} className="grid grid-cols-2 gap-8 gap-x10">
-                            {row.map((item, colIndex) => (
-                                <div
-                                    key={colIndex}
-                                    className="group relative cursor-none"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
-                                    onMouseEnter={() => setActiveItem(item)}
-                                    onMouseLeave={() => setActiveItem(null)}
-                                >
-                                    <h1
-                                        className="text-[8vw] font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
-                                        style={{
-                                            WebkitTextStroke: `2px ${item.color}`,
-                                        }}
+                <Preview className={'h-[170vh]'}>
+                    <CustomCursor
+                        className={activeItem?.className || ''}
+                        icon={activeItem?.icon}
+                        image={activeItem?.image}
+                        text={activeItem?.text}
+                        onHoverMouseEnable={activeItem?.set}
+                        color={activeItem?.color}
+                        glowColor={activeItem?.glowColor}
+                        size={48}
+                        glowSize={64}
+                    />
+                    <div className="grid gap-5">
+                        {gridItems.map((row, rowIndex) => (
+                            <div key={rowIndex} className="grid grid-cols-2 gap-8 items-center justify-center">
+                                {row.map((item, colIndex) => (
+                                    <div
+                                        key={colIndex}
+                                        className="group relative cursor-none"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
+                                        onMouseEnter={() => setActiveItem(item)}
+                                        onMouseLeave={() => setActiveItem(null)}
                                     >
-                                        {
-                                            item.image ? <img src={item.image} /> : item.text
-                                        }
-                                    </h1>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
-                </div>
+                                        <h1
+                                            className="text-[5vw] text-center font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
+                                            style={{
+                                                WebkitTextStroke: `2px ${item.color}`,
+                                            }}
+                                        >
+                                            {
+                                                item.image ? <img src={item.image} height={'400px'} width={'350px'} /> : item.text
+                                            }
+                                        </h1>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </Preview>
 
                 <CodeSnippet
                     code={
@@ -320,33 +321,35 @@ const gridItems = [
                     </p>
                 </div>
 
-                <CustomCursor
-                    className={activeItem?.className || ''}
-                    icon={activeItem?.icon}
-                    image={activeItem?.image}
-                    text={activeItem?.text}
-                    onHoverMouseEnable={activeItem?.set}
-                    color={activeItem?.color}
-                    glowColor={activeItem?.glowColor}
-                    size={48}
-                    glowSize={64}
-                />
-                <div
-                    className="group relative cursor-default"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
-                    onMouseEnter={() => setActiveItem(item)}
-                    onMouseLeave={() => setActiveItem(null)}
-                >
-                    <h1
-                        className="text-[8vw] font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
-                        style={{
-                            WebkitTextStroke: `2px ${item.color}`,
-                        }}
+                <Preview>
+                    <CustomCursor
+                        className={activeItem?.className || ''}
+                        icon={activeItem?.icon}
+                        image={activeItem?.image}
+                        text={activeItem?.text}
+                        onHoverMouseEnable={activeItem?.set}
+                        color={activeItem?.color}
+                        glowColor={activeItem?.glowColor}
+                        size={48}
+                        glowSize={64}
+                    />
+                    <div
+                        className="group relative cursor-default"    // if you want to show the cursor on hover then set this to 'cursor-pointer'
+                        onMouseEnter={() => setActiveItem(item)}
+                        onMouseLeave={() => setActiveItem(null)}
                     >
-                        {
-                            item.text
-                        }
-                    </h1>
-                </div>
+                        <h1
+                            className="text-[8vw] font-bold tracking-tighter text-white transition-colors duration-300 group-hover:text-opacity-0"
+                            style={{
+                                WebkitTextStroke: `2px ${item.color}`,
+                            }}
+                        >
+                            {
+                                item.text
+                            }
+                        </h1>
+                    </div>
+                </Preview>
 
                 <CodeSnippet
                     code={

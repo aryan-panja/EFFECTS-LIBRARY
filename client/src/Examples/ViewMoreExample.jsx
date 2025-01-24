@@ -8,6 +8,7 @@ import {
 } from '@/components/EFFECTS/ViewMore/ViewMore'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { Wrapper } from '@/components/Wrapper'
+import { Preview } from '@/components/Preview'
 
 export const ViewMoreExample = () => {
     return (
@@ -22,18 +23,20 @@ export const ViewMoreExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <ViewMore>
-                    <ViewMoreImage />
-                    <ViewMoreTrigger>
-                        <ViewMoreHeader>
-                            Read More
-                        </ViewMoreHeader>
-                        {/** Content will appear here when expanded */}
-                        <ViewMoreContent className='text-xl'>
-                            This is some additional information that appears when the content is expanded.
-                        </ViewMoreContent>
-                    </ViewMoreTrigger>
-                </ViewMore>
+                <Preview>
+                    <ViewMore>
+                        <ViewMoreImage />
+                        <ViewMoreTrigger>
+                            <ViewMoreHeader>
+                                Read More
+                            </ViewMoreHeader>
+                            {/** Content will appear here when expanded */}
+                            <ViewMoreContent className='text-xl'>
+                                This is some additional information that appears when the content is expanded.
+                            </ViewMoreContent>
+                        </ViewMoreTrigger>
+                    </ViewMore>
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet

@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation';
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview';
 
 export const RollingAnimationExample = () => {
 
@@ -18,7 +19,9 @@ export const RollingAnimationExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
+                <Preview>
+                    <RollingAnimation items={ITEMS} duration={1500} className={"doto-font"} />
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet
@@ -36,7 +39,7 @@ import { RollingAnimation } from '@/components/EFFECTS/Animations/RollingAnimtai
                         `
 const ITEMS = ['AI AGENTS', 'MULTIMODAL ACCESS', 'ML MODELS'];
 
-<RollingAnimation items={ITEMS} duration={3000} className={"doto-font"} />
+<RollingAnimation items={ITEMS} duration={1500} className={"doto-font"} />
 `
                     }
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/Animations/RollingAnimtaion/RollingAnimation.jsx'

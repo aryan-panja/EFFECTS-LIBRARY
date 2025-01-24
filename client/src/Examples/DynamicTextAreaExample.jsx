@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { DynamicTextArea } from '@/components/EFFECTS/DynamicTextArea/DynamicTextArea'
+import { Preview } from '@/components/Preview'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
 
 export const DynamicTextAreaExample = () => {
     return (
@@ -20,7 +21,9 @@ export const DynamicTextAreaExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <DynamicTextArea />
+                <Preview>
+                    <DynamicTextArea />
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet
@@ -42,7 +45,9 @@ import { DynamicTextArea } from '@/components/EFFECTS/DynamicTextArea/DynamicTex
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/DynamicTextArea/DynamicTextArea.jsx'
                 />
 
-                <DynamicTextArea targetCharacter='c' targetWord='ary' className={'mt-8'} />
+                <Preview>
+                    <DynamicTextArea targetCharacter='c' targetWord='ary' className={'mt-8'} />
+                </Preview>
 
                 <CodeSnippet
                     code={`
