@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { TextForm } from '@/components/EFFECTS/TextAnimations/TextForm'
+import { Preview } from '@/components/Preview'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
 
 // Use the svg for the text animation
 
@@ -31,7 +32,9 @@ export const TextFormExample = () => {
 
       <div className="flex flex-col items-center justify-center">
 
-        <TextForm fill={'#ffff'} duration={'5s'} />
+        <Preview>
+          <TextForm fill={'#ffff'} duration={'5s'} />
+        </Preview>
 
         <CodeSnippet
           code={
@@ -106,7 +109,9 @@ import { TextForm } from '@/components/EFFECTS/TextAnimations/TextForm'
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
         />
 
-        <TextForm />
+        <Preview>
+          <TextForm />
+        </Preview>
 
         <CodeSnippet
           code={
@@ -117,7 +122,9 @@ import { TextForm } from '@/components/EFFECTS/TextAnimations/TextForm'
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextForm.jsx'
         />
 
-        <TextForm duration={'4s'} />
+        <Preview>
+          <TextForm duration={'4s'} />
+        </Preview>
 
         <CodeSnippet
           code={

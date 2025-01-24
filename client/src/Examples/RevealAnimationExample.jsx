@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { RevealAnimation } from '@/components/EFFECTS/Animations/RevealAnimation/RevealAnimation'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview'
 
 export const RevealAnimationExample = () => {
     return (
@@ -19,10 +20,12 @@ export const RevealAnimationExample = () => {
                     Example - Here is 'animate-clip-animation-1' animation example. Apply this animation by copying the code below.
                 </p>
 
-                <RevealAnimation
-                    src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
-                    animation='animate-clip-animation-1'
-                />
+                <Preview>
+                    <RevealAnimation
+                        src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
+                        animation='animate-clip-animation-1'
+                    />
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet
@@ -88,10 +91,12 @@ animation: {
                     Example - Here is 'animate-clip-animation-2' animation example. Apply this animation by copying the code below.
                 </p>
 
-                <RevealAnimation
-                    src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
-                    animation='animate-clip-animation-2'
-                />
+                <Preview>
+                    <RevealAnimation
+                        src={'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'}
+                        animation='animate-clip-animation-2'
+                    />
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet

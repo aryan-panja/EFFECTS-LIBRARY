@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { TextAurora } from '@/components/EFFECTS/TextAnimations/TextAurora'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview'
 
 export const TextAuroraExample = () => {
   return (
@@ -15,9 +16,11 @@ export const TextAuroraExample = () => {
 
       <div className="flex flex-col items-center justify-center">
 
-        <TextAurora>
-          Hello
-        </TextAurora>
+        <Preview>
+          <TextAurora>
+            Hello
+          </TextAurora>
+        </Preview>
 
         {/* SyntaxHighlighter for JSX code display */}
 
@@ -40,9 +43,11 @@ import { TextShine } from '@/components/EFFECTS/TextAnimations/TextShine'`
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/TextAurora.jsx'
         />
 
-        <TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
-          Hello
-        </TextAurora>
+        <Preview>
+          <TextAurora className={'text-[clamp(3rem,8vw,5rem)]'}>
+            Hello
+          </TextAurora>
+        </Preview>
 
         <CodeSnippet
           code={

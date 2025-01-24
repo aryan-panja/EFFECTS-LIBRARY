@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { ParallaxImageButton } from '@/components/EFFECTS/Parallax/ParallaxImageButton'
+import { Preview } from '@/components/Preview'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
 
 export const ParallaxImageButtonExample = () => {
   return (
@@ -16,7 +17,9 @@ export const ParallaxImageButtonExample = () => {
 
       <div className="flex flex-col items-center justify-center">
 
-        <ParallaxImageButton linkOutside={'https://www.google.com'} >hello</ParallaxImageButton>
+        <Preview>
+          <ParallaxImageButton linkOutside={'https://www.google.com'} >hello</ParallaxImageButton>
+        </Preview>
 
         {/* SyntaxHighlighter for JSX code display */}
         <CodeSnippet

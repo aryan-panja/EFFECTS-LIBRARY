@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { SingleRating } from '@/components/EFFECTS/Rating/SingleRating'
+import { Preview } from '@/components/Preview'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
 
 export const RatingsExample = () => {
 
@@ -28,7 +29,9 @@ export const RatingsExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <SingleRating list={list} />
+                <Preview>
+                    <SingleRating list={list} />
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet

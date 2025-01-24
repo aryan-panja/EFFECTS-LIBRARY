@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { ParallaxImage } from '@/components/EFFECTS/Parallax/ParallaxImage'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview'
 
 export const ParallaxImageExample = () => {
 
@@ -16,7 +17,9 @@ export const ParallaxImageExample = () => {
 
       <div className="flex flex-col items-center justify-center">
 
-        <ParallaxImage className="rounded-xl" />
+        <Preview>
+          <ParallaxImage className="rounded-xl" />
+        </Preview>
 
         {/* SyntaxHighlighter for JSX code display */}
         <CodeSnippet

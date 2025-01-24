@@ -72,7 +72,7 @@ export const SearchBar = ({ className, searchRecents, searchData, placeholder = 
     };
 
     return (
-        <div className={cn('w-1/2 h-full', className)}>
+        <div className={cn('w-1/2', className)}>
             <div ref={inputRef} className="relative w-full">
                 <input
                     type="text"

@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { BouncyReveal } from '@/components/EFFECTS/TextAnimations/BouncyReveal'
 import { Wrapper } from '@/components/Wrapper'
-import React from 'react'
+import { Preview } from '@/components/Preview'
 
 export const BouncyRevealExample = () => {
     return (
@@ -17,9 +18,11 @@ export const BouncyRevealExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <BouncyReveal>
-                    Hello
-                </BouncyReveal>
+                <Preview className={'min-h-[80vh]'}>
+                    <BouncyReveal>
+                        Hello
+                    </BouncyReveal>
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
 
@@ -72,9 +75,11 @@ import { BouncyReveal } from '@/components/EFFECTS/TextAnimations/BouncyReveal'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
                 />
 
-                <BouncyReveal className={'font-bold'} color='#ffff'>
-                    Hello
-                </BouncyReveal>
+                <Preview className={'min-h-[80vh]'}>
+                    <BouncyReveal className={'font-bold'} color='#ffff'>
+                        Hello
+                    </BouncyReveal>
+                </Preview>
 
                 <CodeSnippet
                     code={
@@ -87,9 +92,11 @@ import { BouncyReveal } from '@/components/EFFECTS/TextAnimations/BouncyReveal'
                     githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/TextAnimations/BouncyReveal.jsx'
                 />
 
-                <BouncyReveal className={'font-bold'} color='#ffff' stroke={'#0000'}>
-                    aryan
-                </BouncyReveal>
+                <Preview className={'min-h-[80vh]'}>
+                    <BouncyReveal className={'font-bold'} color='#ffff' stroke={'#0000'}>
+                        aryan
+                    </BouncyReveal>
+                </Preview>
 
                 <CodeSnippet
                     code={

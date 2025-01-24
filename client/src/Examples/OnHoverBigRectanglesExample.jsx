@@ -1,12 +1,13 @@
+import React from 'react'
 import {
     ExpandableInfoCard,
     ExpandableInfoCardTextAfter,
     ExpandableInfoCardTextBefore
 } from '@/components/EFFECTS/OnHoverBigRectangles/OnHoverBigRectangles'
-import React from 'react'
 import test1 from "@/assets/photos/1.jpg"
 import { CodeSnippet } from '@/components/CodeSnippet'
 import { Wrapper } from '@/components/Wrapper'
+import { Preview } from '@/components/Preview'
 
 export const OnHoverBigRectanglesExample = () => {
     return (
@@ -21,15 +22,17 @@ export const OnHoverBigRectanglesExample = () => {
 
             <div className="flex flex-col items-center justify-center">
 
-                <ExpandableInfoCard src={test1}>
-                    <ExpandableInfoCardTextBefore>
-                        <h1>Aryan Panja</h1>
-                    </ExpandableInfoCardTextBefore>
-                    <ExpandableInfoCardTextAfter>
-                        <h1>Aryan Panja</h1>
-                        <p className='text-sm'>A student of 3<sub>rd</sub> Year</p>
-                    </ExpandableInfoCardTextAfter>
-                </ExpandableInfoCard>
+                <Preview>
+                    <ExpandableInfoCard src={test1}>
+                        <ExpandableInfoCardTextBefore>
+                            <h1>Aryan Panja</h1>
+                        </ExpandableInfoCardTextBefore>
+                        <ExpandableInfoCardTextAfter>
+                            <h1>Aryan Panja</h1>
+                            <p className='text-sm'>A student of 3<sub>rd</sub> Year</p>
+                        </ExpandableInfoCardTextAfter>
+                    </ExpandableInfoCard>
+                </Preview>
 
                 {/* SyntaxHighlighter for JSX code display */}
                 <CodeSnippet

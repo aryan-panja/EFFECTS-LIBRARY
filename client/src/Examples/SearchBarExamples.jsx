@@ -1,7 +1,8 @@
+import React from 'react'
 import { CodeSnippet } from '@/components/CodeSnippet';
 import { SearchBar } from '@/components/EFFECTS/SearchBar/SearchBar'
+import { Preview } from '@/components/Preview';
 import { Wrapper } from '@/components/Wrapper';
-import React from 'react'
 
 export const SearchBarExamples = () => {
 
@@ -43,15 +44,17 @@ export const SearchBarExamples = () => {
           Example - Here is the search bar where you can define the shortcut that you have given to focus on the search bar as well as the placeholder option.
         </p>
 
-        <SearchBar
-          className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
-          id='search-bar'
-          searchData={data}
-          searchRecents={recents}
-          placeholder='Search here......'
-          shortcutKey={'⌘+K'}  // Custom shortcut key
-          iconColor='#fff'
-        />
+        <Preview>
+          <SearchBar
+            className={'text-sm rounded-3xl bg-[#191919] border-[#191919] text-white'}
+            id='search-bar'
+            searchData={data}
+            searchRecents={recents}
+            placeholder='Search here......'
+            shortcutKey={'⌘+K'}  // Custom shortcut key
+            iconColor='#fff'
+          />
+        </Preview>
 
         {/* SyntaxHighlighter for JSX code display */}
         <CodeSnippet
@@ -79,12 +82,14 @@ import { SearchBar } from '@/components/EFFECTS/SearchBar/SearchBar'
           }
           githubLink='https://github.com/aryan-panja/EFFECTS-LIBRARY/blob/main/client/src/components/EFFECTS/SearchBar/SearchBar.jsx'
         />
-        
+
         <p className="my-8 text-zinc-300 roboto-regular">
           Example - Here is the search bar where you can send the props of search data and recent history as we can see in Youtube or Google searchbar.
         </p>
 
-        <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
+        <Preview>
+          <SearchBar searchData={data} searchRecents={recents} iconColor={'#000'} />
+        </Preview>
 
         <CodeSnippet
           code={`
@@ -111,7 +116,9 @@ const recents = [
           Example - Here is the search bar where you are just sending the search data and the search input will be searched from this data.
         </p>
 
-        <SearchBar searchData={data} iconColor={'#000'} />
+        <Preview>
+          <SearchBar searchData={data} iconColor={'#000'} />
+        </Preview>
 
         <CodeSnippet
           code={`
