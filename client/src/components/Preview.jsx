@@ -1,5 +1,5 @@
 import React from 'react'
-import pattern from '../../public/bg pattern/pattern.svg'
+import pattern from '@/assets/pattern.svg'
 import { cn } from '@/lib/utils'
 
 export const Preview = ({ children, className }) => {
