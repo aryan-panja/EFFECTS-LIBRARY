@@ -7,7 +7,7 @@ export const Preview = ({ children, className }) => {
         <div
             className={cn('w-full min-h-[90vh] mt-8 border-[1px] border-[#7b7b7ba5] rounded-lg overflow-hidden relative flex justify-center items-center bg-repeat bg-auto bg-center bg-clip-content', className)}
             style={{
-                backgroundImage: `url(${pattern})`,
+                backgroundImage: `url(/pattern.svg)`,
             }}>
             {children}
         </div>
